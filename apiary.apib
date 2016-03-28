@@ -1,4 +1,5 @@
 FORMAT: 1A
+HOST: http://pnpd.uat.maqe.com/api/v1
 
 # PNPD API
 
@@ -15,48 +16,51 @@ Sprint 1
 - PNPD-21,Filter Painai page [Feed]
 - PNPD-72,Display continent in Explore page [Explore]
 
+## Group API Authentication
+
+http://docs.pnpdauthen.apiary.io
+
 ## Group Signup
 
-#### Signup with e-mail [GET /v1/signup]
+#### Signup with e-mail [GET /signup]
+
++ Request (application/json)
+
+        {}
+        
++ Response 200 (application/json)
+
+        {}
 
 
-+ Parameters
+#### Signup with Facebook [GET /signup-facebook]
 
++ Request (application/json)
 
-+ Response 200
+        {}
+        
++ Response 200 (application/json)
 
-    An array of products
-    
-    + Body
-    + Schema
-
-            {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "product_id": {
-                    "type": "string",
-                    "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
-                  },
-                  "description": {
-                    "type": "string",
-                    "description": "Description of product."
-                  },
-                  "display_name": {
-                    "type": "string",
-                    "description": "Display name of product."
-                  },
-                  "capacity": {
-                    "type": "string",
-                    "description": "Capacity of product. For example, 4 people."
-                  },
-                  "image": {
-                    "type": "string",
-                    "description": "Image URL representing the product."
-                  }
-                }
-              }
-            }
+        {}
 
 ## Group Login
+
+#### Login with e-mail [GET /login]
+
++ Request (application/json)
+
+        {}
+        
++ Response 200 (application/json)
+
+        {}
+
+#### Login with Facebook [GET /login-facebook]
+
++ Request (application/json)
+
+        {}
+        
++ Response 200 (application/json)
+
+        {}
