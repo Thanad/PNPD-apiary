@@ -16,51 +16,45 @@ Sprint 1
 - PNPD-21,Filter Painai page [Feed]
 - PNPD-72,Display continent in Explore page [Explore]
 
-## Group API Authentication
+## Group API Authentication and User login API
+- PNPD-13,Log in with Facebook
+- PNPD-14,Log in with e-mail
 
 http://docs.pnpdauthen.apiary.io
 
 ## Group Signup
 
-#### Signup with e-mail [GET /signup]
+#### Signup with e-mail [POST /signup]
+- PNPD-12,Signup with e-mail
 
 + Request (application/json)
-
-        {}
-        
 + Response 200 (application/json)
 
-        {}
-
-
-#### Signup with Facebook [GET /signup-facebook]
+#### Signup with Facebook [POST /signup-facebook]
+- PNPD-10,Signup with Facebook
 
 + Request (application/json)
-
-        {}
-        
 + Response 200 (application/json)
 
-        {}
-
-## Group Login
-
-#### Login with e-mail [GET /login]
-
+## Group Reset password
+#### Send link to e-mail [POST /reset_password]
+- PNPD-16,Send e-mail link to reset password
 + Request (application/json)
-
-        {}
-        
 + Response 200 (application/json)
 
-        {}
+## Group Customize My Painai
+- PNPD-65, Follow activities
+- PNPD-63, Display continents in customize places
+- PNPD-59, Display places by the continent
 
-#### Login with Facebook [GET /login-facebook]
-
+#### List all activities [GET /activities]
 + Request (application/json)
-
-        {}
-        
 + Response 200 (application/json)
 
-        {}
+#### Display continents in customize places [GET /places]
++ Request (application/json)
++ Response 200 (application/json)
+
+#### Display countries by the continent [GET /continents/xxx/countries]
++ Request (application/json)
++ Response 200 (application/json)
