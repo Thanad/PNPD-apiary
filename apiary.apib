@@ -71,7 +71,7 @@ http://docs.pnpdauthen.apiary.io
             "email":"invalid@gmail.com"
         }
 
-+ Response 200 (application/json)
++ Response 501 (application/json)
 
         {
             "errors":["That email address is not valid. Please check it and try again"]
@@ -90,6 +90,35 @@ http://docs.pnpdauthen.apiary.io
 - PNPD-65, Follow activities
 - PNPD-63, Display continents in customize places
 - PNPD-59, Display places by the continent
+
+### Follow [/follow]
+
+#### Follow a activity or continent [POST]
++ Request follow a activity with success (application/json)
+
+        {
+            "type": "activities",
+            "name: "PAI EAT"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "messages":["Success"]
+        }
+
++ Request Follow a continent with success (application/json)
+
+        {
+            "type": "continents",
+            "name: "EUROPE"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "messages":["Success"]
+        }
 
 ### Activities [/activities]
 
