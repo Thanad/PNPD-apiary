@@ -28,13 +28,54 @@ http://docs.pnpdauthen.apiary.io
 - PNPD-12,Signup with e-mail
 
 + Request (application/json)
+
+        {
+            "email":"test@gmail.com"
+        }
+        
 + Response 200 (application/json)
 
 #### Signup with Facebook [POST /signup-facebook]
 - PNPD-10,Signup with Facebook
++ Request with success (application/json)
 
-+ Request (application/json)
+        {
+            "token_facebook":"xxxxxxxxxxxx"
+        }
+
 + Response 200 (application/json)
+
+        {
+            "messages":["Success"]
+        }
+        
+## Group Reset password
+#### Send link to e-mail [POST /reset_password]
+- PNPD-16,Send e-mail link to reset password
++ Request with success (application/json)
+
+        {
+            "email":"test@gmail.com"
+        }
+
+
++ Response 200 (application/json)
+
+        {
+            "messages":["Success"]
+        }
+        
++ Request with error (application/json)
+
+        {
+            "email":"invalid@gmail.com"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "errors":["That email address is not valid. Please check it and try again"]
+        }
 
 ## Group User Info
 #### Current user [GET /me]
@@ -44,19 +85,16 @@ http://docs.pnpdauthen.apiary.io
 
 
         {"id":1,"email":"test@gmail.com","created_at":null,"updated_at":null}
-        
-## Group Reset password
-#### Send link to e-mail [POST /auth/reset]
-- PNPD-16,Send e-mail link to reset password
-+ Request (application/json)
-+ Response 200 (application/json)
 
 ## Group Customize My Painai
 - PNPD-65, Follow activities
 - PNPD-63, Display continents in customize places
 - PNPD-59, Display places by the continent
 
-#### List all activities [GET /activities]
+### Activities [/activities]
+
+#### List all activities [GET]
+
 + Request (application/json)
 + Response 200 (application/json)
 
@@ -127,7 +165,14 @@ http://docs.pnpdauthen.apiary.io
           }
         ]
 
-#### Display customize places [GET /places]
+#### Follow activities [POST]
++ Request (application/json)
++ Response 200 (application/json)
+
+
+### Places [/places]
+
+#### Display customize places [GET]
 + Request (application/json)
 + Response 200 (application/json)
 
