@@ -60,10 +60,412 @@ http://docs.pnpdauthen.apiary.io
 + Request (application/json)
 + Response 200 (application/json)
 
-#### Display continents in customize places [GET /places]
+        [
+          {
+            "type": "activities",
+            "name": "PAI EAT",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?21878"
+            ],
+            "endpoint": "/api/v1/activities/pai%20eat"
+          },
+          {
+            "type": "activities",
+            "name": "PAI DRINK",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "endpoint": "/api/v1/activities/pai%20drink"
+          },
+          {
+            "type": "activities",
+            "name": "PAI SHOP",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?21878"
+            ],
+            "endpoint": "/api/v1/activities/pai%20shop"
+          },
+          {
+            "type": "activities",
+            "name": "PAI SLEEP",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "endpoint": "/api/v1/activities/pai%20sleep"
+          },
+          {
+            "type": "activities",
+            "name": "PAI CHECK-IN",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?21878"
+            ],
+            "endpoint": "/api/v1/activities/pai%20check-in"
+          },
+          {
+            "type": "activities",
+            "name": "PAI ADVENTURE",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "endpoint": "/api/v1/activities/pai%20adventure"
+          },
+          {
+            "type": "activities",
+            "name": "PAI NATURE",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "endpoint": "/api/v1/activities/pai%20nature"
+          },
+          {
+            "type": "activities",
+            "name": "PAI SPORT",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "endpoint": "/api/v1/activities/pai%20sport"
+          }
+        ]
+
+#### Display customize places [GET /places]
 + Request (application/json)
 + Response 200 (application/json)
 
-#### Display countries by the continent [GET /continents/xxx/countries]
+        [
+          {
+            "type": "continents",
+            "name": "EUROPE",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?21878"
+            ],
+            "location": {
+              "latitude": -23.291851,
+              "longitude": -64.997873
+            },
+            "endpoint": "/api/v1/continents/europe/countries"
+          },
+          {
+            "type": "continents",
+            "name": "AFFRICA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?22957"
+            ],
+            "location": {
+              "latitude": 61.614921,
+              "longitude": -158.650129
+            },
+            "endpoint": "/api/v1/continents/affrica/countries"
+          },
+          {
+            "type": "continents",
+            "name": "NORTH AMERICA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?65627"
+            ],
+            "location": {
+              "latitude": -4.423087,
+              "longitude": 134.769223
+            },
+            "endpoint": "/api/v1/continents/north america/countries"
+          },
+          {
+            "type": "countries",
+            "name": "THAILAND",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?85691"
+            ],
+            "location": {
+              "latitude": 59.600294,
+              "longitude": -116.591653
+            },
+            "endpoint": "/api/v1/countries/thailand"
+          },
+          {
+            "type": "continents",
+            "name": "ASIA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?95376"
+            ],
+            "location": {
+              "latitude": 14.583206,
+              "longitude": -165.701544
+            },
+            "endpoint": "/api/v1/continents/asia/countries"
+          },
+          {
+            "type": "continents",
+            "name": "SOUTH AMERICA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?49173"
+            ],
+            "location": {
+              "latitude": -60.391679,
+              "longitude": 57.029127
+            },
+            "endpoint": "/api/v1/continents/south america/countries"
+          },
+          {
+            "type": "countries",
+            "name": "AUSTRALIA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/australia"
+          },
+          {
+            "type": "continents",
+            "name": "ANTACTICA",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?68187"
+            ],
+            "location": {
+              "latitude": 32.70329,
+              "longitude": -83.885659
+            },
+            "endpoint": "/api/v1/continents/antactica/countries"
+          }
+        ]
+        
+
+#### Display countries by the continent [GET /continents/{continent}/countries]
+
++ Parameters 
+    + continent:europe (string)
+    
 + Request (application/json)
 + Response 200 (application/json)
+
+        [
+          {
+            "type": "countries",
+            "name": "United Kingdom",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/united kingdom"
+          },
+          {
+            "type": "countries",
+            "name": "France",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/france"
+          },
+          {
+            "type": "countries",
+            "name": "Finland",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/finland"
+          },
+          {
+            "type": "countries",
+            "name": "Belgium",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/belgium"
+          },
+          {
+            "type": "countries",
+            "name": "Latvia",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/latvia"
+          },
+          {
+            "type": "countries",
+            "name": "Denmark",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/denmark"
+          },
+          {
+            "type": "countries",
+            "name": "Norway",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/norway"
+          },
+          {
+            "type": "countries",
+            "name": "Bulgaria",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/bulgaria"
+          },
+          {
+            "type": "countries",
+            "name": "Hungary",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/hungary"
+          },
+          {
+            "type": "countries",
+            "name": "Italy",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/italy"
+          },
+          {
+            "type": "countries",
+            "name": "Netherlands",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/netherlands"
+          },
+          {
+            "type": "countries",
+            "name": "Portugal",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/portugal"
+          },
+          {
+            "type": "countries",
+            "name": "Romania",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/romania"
+          },
+          {
+            "type": "countries",
+            "name": "Greece",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/greece"
+          },
+          {
+            "type": "countries",
+            "name": "Austria",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/austria"
+          },
+          {
+            "type": "countries",
+            "name": "Spain",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/spain"
+          },
+          {
+            "type": "countries",
+            "name": "Sweden",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/sweden"
+          },
+          {
+            "type": "countries",
+            "name": "Germany",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/germany"
+          },
+          {
+            "type": "countries",
+            "name": "Switzerland",
+            "images": [
+              "http://lorempixel.com/1000/1000/city/?84556"
+            ],
+            "location": {
+              "latitude": 47.215102,
+              "longitude": 141.045943
+            },
+            "endpoint": "/api/v1/countries/switzerland"
+          }
+        ]
