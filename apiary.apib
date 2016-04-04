@@ -71,7 +71,7 @@ http://docs.pnpdauthen.apiary.io
             "email":"invalid@gmail.com"
         }
 
-+ Response 501 (application/json)
++ Response 200 (application/json)
 
         {
             "errors":["That email address is not valid. Please check it and try again"]
@@ -91,15 +91,44 @@ http://docs.pnpdauthen.apiary.io
 - PNPD-63, Display continents in customize places
 - PNPD-59, Display places by the continent
 
-### Follow [/follow]
+### Follow [/follows]
+
+#### Get all follow list [GET]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
+
+        {
+            "places":[
+                {
+                    "type": "countries",
+                    "name": "England",
+                },
+                {
+                    "type": "city",
+                    "name": "Madrid",
+                },
+                {
+                    "type": "city",
+                    "name": "Madrid",
+                },
+                {
+                    "type": "city",
+                    "name": "Rome",
+                }
+           ],
+           "activities":[
+                {
+                    "type": "activities",
+                    "name": "PAI EAT",
+                }
+           ]
+        }
+
 
 #### Follow a activity or continent [POST]
 + Request follow a activity with success (application/json)
 
-        {
-            "type": "activities",
-            "name: "PAI EAT"
-        }
+        [{"type":"activities","name":"PAI EAT"}]
         
 + Response 200 (application/json)
 
@@ -109,16 +138,31 @@ http://docs.pnpdauthen.apiary.io
 
 + Request Follow a continent with success (application/json)
 
-        {
-            "type": "continents",
-            "name: "EUROPE"
-        }
+        [{"type":"continents","name":"EUROPE"}]
         
 + Response 200 (application/json)
 
         {
             "messages":["Success"]
         }
+        
+        
+#### Unfollow a activity or continent [DELETE]
++ Request unfollow a activity with success (application/json)
+
+        [
+            {
+                "type": "activities",
+                "name: "PAI EAT"
+            }
+        ]
+        
++ Response 200 (application/json)
+
+        {
+            "messages":["Success"]
+        }
+
 
 ### Activities [/activities]
 
@@ -194,10 +238,6 @@ http://docs.pnpdauthen.apiary.io
           }
         ]
 
-#### Follow activities [POST]
-+ Request (application/json)
-+ Response 200 (application/json)
-
 
 ### Places [/places]
 
@@ -205,6 +245,8 @@ http://docs.pnpdauthen.apiary.io
 + Request (application/json)
 + Response 200 (application/json)
 
+        {
+        "data":
         [
           {
             "type": "continents",
@@ -240,7 +282,7 @@ http://docs.pnpdauthen.apiary.io
               "latitude": -4.423087,
               "longitude": 134.769223
             },
-            "endpoint": "/api/v1/continents/north america/countries"
+            "endpoint": "/api/v1/continents/north%20america/countries"
           },
           {
             "type": "countries",
@@ -276,7 +318,7 @@ http://docs.pnpdauthen.apiary.io
               "latitude": -60.391679,
               "longitude": 57.029127
             },
-            "endpoint": "/api/v1/continents/south america/countries"
+            "endpoint": "/api/v1/continents/south%20america/countries"
           },
           {
             "type": "countries",
@@ -302,7 +344,20 @@ http://docs.pnpdauthen.apiary.io
             },
             "endpoint": "/api/v1/continents/antactica/countries"
           }
-        ]
+        ],
+        "meta": {
+            "pagination": {
+              "total": 8,
+              "count": 8,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": {
+                "next":"http:\/\/pnpd.dev\/api\/v1\/users?page=2"
+              }
+            }
+          }
+        }
         
 
 #### Display countries by the continent [GET /continents/{continent}/countries]
@@ -313,7 +368,7 @@ http://docs.pnpdauthen.apiary.io
 + Request (application/json)
 + Response 200 (application/json)
 
-        [
+        {"data":[
           {
             "type": "countries",
             "name": "United Kingdom",
@@ -542,4 +597,29 @@ http://docs.pnpdauthen.apiary.io
             },
             "endpoint": "/api/v1/countries/switzerland"
           }
-        ]
+        ],
+        "meta": {
+            "pagination": {
+              "total": 8,
+              "count": 8,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": {
+                "next":"http:\/\/pnpd.dev\/api\/v1\/users?page=2"
+              }
+            }
+          }
+        }
+        
+
+
+#### Display cities in country [GET /countries/{country}/cities]
+
++ Parameters 
+    + country:bangkok (string)
+    
++ Request (application/json)
++ Response 200 (application/json)
+
+        {"data":[[{"type":"cities","name":"Bangkok","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?85319"],"location":{"latitude":-48.304437,"longitude":112.303284},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Bangkok"}],[{"type":"cities","name":"Nonthaburi","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?86568"],"location":{"latitude":-51.32023,"longitude":173.980402},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Nonthaburi"}],[{"type":"cities","name":"Nakhon Ratchasima","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?63154"],"location":{"latitude":-10.906368,"longitude":-124.607767},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Nakhon%20Ratchasima"}],[{"type":"cities","name":"Chiang Mai","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?20179"],"location":{"latitude":70.077715,"longitude":-43.660162},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Chiang%20Mai"}],[{"type":"cities","name":"Hat Yai","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?33801"],"location":{"latitude":57.288166,"longitude":57.68898},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Hat%20Yai"}],[{"type":"cities","name":"Udon Thani","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?57406"],"location":{"latitude":46.603585,"longitude":-170.682593},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Udon%20Thani"}],[{"type":"cities","name":"Pak Kret","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?62465"],"location":{"latitude":-73.333549,"longitude":72.163387},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Pak%20Kret"}],[{"type":"cities","name":"Khon Kaen","images":["http:\/\/lorempixel.com\/1000\/1000\/city\/?27956"],"location":{"latitude":-65.298771,"longitude":29.678721},"endpoint":"http:\/\/pnpd.dev\/api\/v1\/cities\/\/Khon%20Kaen"}]],"meta":{"pagination":{"total":8,"count":8,"per_page":5,"current_page":1,"total_pages":2,"links":{"next":"http:\/\/pnpd.dev\/api\/v1\/countries\/thailand\/cities?page=2"}}}}
