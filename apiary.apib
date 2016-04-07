@@ -176,198 +176,121 @@ http://docs.pnpdauthen.apiary.io
 + Request (application/json)
 + Response 200 (application/json)
 
-        [
-          {
-            "type": "activities",
-            "name": "PAI EAT",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?21878"
-            ],
-            "endpoint": "/api/v1/activities/pai%20eat"
-          },
-          {
-            "type": "activities",
-            "name": "PAI DRINK",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "endpoint": "/api/v1/activities/pai%20drink"
-          },
-          {
-            "type": "activities",
-            "name": "PAI SHOP",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?21878"
-            ],
-            "endpoint": "/api/v1/activities/pai%20shop"
-          },
-          {
-            "type": "activities",
-            "name": "PAI SLEEP",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "endpoint": "/api/v1/activities/pai%20sleep"
-          },
-          {
-            "type": "activities",
-            "name": "PAI CHECK-IN",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?21878"
-            ],
-            "endpoint": "/api/v1/activities/pai%20check-in"
-          },
-          {
-            "type": "activities",
-            "name": "PAI ADVENTURE",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "endpoint": "/api/v1/activities/pai%20adventure"
-          },
-          {
-            "type": "activities",
-            "name": "PAI NATURE",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "endpoint": "/api/v1/activities/pai%20nature"
-          },
-          {
-            "type": "activities",
-            "name": "PAI SPORT",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "endpoint": "/api/v1/activities/pai%20sport"
-          }
-        ]
-
-
-### Places [/places]
-
-#### Display customize places [GET]
-+ Request (application/json)
-+ Response 200 (application/json)
-
         {
-        "data":
-        [
-          {
-            "id": 1,
-            "type": "continents",
-            "name": "EUROPE",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?21878"
-            ],
-            "location": {
-              "latitude": -23.291851,
-              "longitude": -64.997873
+          "data": [
+            {
+              "id": 1,
+              "type": "continents",
+              "name": "EUROPE",
+              "images": [
+                "http://loremflickr.com/1000/1000/europe,landmark/all"
+              ],
+              "location": {
+                "latitude": -86.290039,
+                "longitude": 43.788452
+              },
+              "endpoint": "/api/v1/continents/1/countries"
             },
-            "endpoint": "/api/v1/continents/1/countries"
-          },
-          {
-            "id": 2,
-            "type": "continents",
-            "name": "AFFRICA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?22957"
-            ],
-            "location": {
-              "latitude": 61.614921,
-              "longitude": -158.650129
+            {
+              "id": 2,
+              "type": "continents",
+              "name": "AFFRICA",
+              "images": [
+                "http://loremflickr.com/1000/1000/affrica,landmark/all"
+              ],
+              "location": {
+                "latitude": -71.197869,
+                "longitude": 73.279322
+              },
+              "endpoint": "/api/v1/continents/2/countries"
             },
-            "endpoint": "/api/v1/continents/2/countries"
-          },
-          {
-            "id": 3,
-            "type": "continents",
-            "name": "NORTH AMERICA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?65627"
-            ],
-            "location": {
-              "latitude": -4.423087,
-              "longitude": 134.769223
+            {
+              "id": 3,
+              "type": "continents",
+              "name": "NORTH AMERICA",
+              "images": [
+                "http://loremflickr.com/1000/1000/north%20america,landmark/all"
+              ],
+              "location": {
+                "latitude": -4.571319,
+                "longitude": 101.87816
+              },
+              "endpoint": "/api/v1/continents/3/countries"
             },
-            "endpoint": "/api/v1/continents/3/countries"
-          },
-          {
-            "id": 4,
-            "type": "countries",
-            "name": "THAILAND",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?85691"
-            ],
-            "location": {
-              "latitude": 59.600294,
-              "longitude": -116.591653
+            {
+              "id": 4,
+              "type": "countries",
+              "name": "THAILAND",
+              "images": [
+                "http://loremflickr.com/1000/1000/thailand,landmark/all"
+              ],
+              "location": {
+                "latitude": 22.540198,
+                "longitude": -75.055181
+              },
+              "endpoint": "/api/v1/countries/4/cities"
             },
-            "endpoint": "/api/v1/countries/4/cities"
-          },
-          {
-            "id": 5,
-            "type": "continents",
-            "name": "ASIA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?95376"
-            ],
-            "location": {
-              "latitude": 14.583206,
-              "longitude": -165.701544
+            {
+              "id": 5,
+              "type": "continents",
+              "name": "ASIA",
+              "images": [
+                "http://loremflickr.com/1000/1000/asia,landmark/all"
+              ],
+              "location": {
+                "latitude": 70.258306,
+                "longitude": -163.375881
+              },
+              "endpoint": "/api/v1/continents/5/countries"
             },
-            "endpoint": "/api/v1/continents/5/countries"
-          },
-          {
-            "id": 6,
-            "type": "continents",
-            "name": "SOUTH AMERICA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?49173"
-            ],
-            "location": {
-              "latitude": -60.391679,
-              "longitude": 57.029127
+            {
+              "id": 6,
+              "type": "continents",
+              "name": "SOUTH AMERICA",
+              "images": [
+                "http://loremflickr.com/1000/1000/south%20america,landmark/all"
+              ],
+              "location": {
+                "latitude": -15.106235,
+                "longitude": -174.590537
+              },
+              "endpoint": "/api/v1/continents/6/countries"
             },
-            "endpoint": "/api/v1/continents/6/countries"
-          },
-          {
-            "id": 7,
-            "type": "continents",
-            "name": "AUSTRALIA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?84556"
-            ],
-            "location": {
-              "latitude": 47.215102,
-              "longitude": 141.045943
+            {
+              "id": 7,
+              "type": "continents",
+              "name": "AUSTRALIA",
+              "images": [
+                "http://loremflickr.com/1000/1000/australia,landmark/all"
+              ],
+              "location": {
+                "latitude": 53.766375,
+                "longitude": -76.414729
+              },
+              "endpoint": "/api/v1/continents/7/countries"
             },
-            "endpoint": "/api/v1/countries/7/cities"
-          },
-          {
-            "id": 8,
-            "type": "continents",
-            "name": "ANTARCTICA",
-            "images": [
-              "http://lorempixel.com/1000/1000/city/?68187"
-            ],
-            "location": {
-              "latitude": 32.70329,
-              "longitude": -83.885659
-            },
-            "endpoint": "/api/v1/continents/8/countries"
-          }
-        ],
-        "meta": {
+            {
+              "id": 8,
+              "type": "continents",
+              "name": "ANTARCTICA",
+              "images": [
+                "http://loremflickr.com/1000/1000/antarctica,landmark/all"
+              ],
+              "location": {
+                "latitude": -68.931063,
+                "longitude": -123.010064
+              },
+              "endpoint": "/api/v1/continents/8/countries"
+            }
+          ],
+          "meta": {
             "pagination": {
               "total": 8,
               "count": 8,
               "per_page": 8,
               "current_page": 1,
               "total_pages": 1,
-              "links": {
-                "next":"http:\/\/pnpd.dev\/api\/v1\/places?page=2"
-              }
+              "links": []
             }
           }
         }
