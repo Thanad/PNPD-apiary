@@ -30,23 +30,42 @@ http://docs.pnpdauthen.apiary.io
 + Request (application/json)
 
         {
-            "email":"test@gmail.com"
+            "grant_type": "password",
+            "client_id": "client",
+            "client_secret":"pass",
+            "username":"test@gmail.com",
+            "password":""
         }
         
 + Response 200 (application/json)
+
+        {
+          "access_token": "MwX87MfxIiLDvetjhnNO9VgGmfVhG3uJMXaLjblH",
+          "token_type": "Bearer",
+          "expires_in": 31536000,
+          "refresh_token": "2HWUj41pXk85vnYopEX6cJgF3OYc0S4wl2JWnSMl"
+        }
 
 #### Signup with Facebook [POST /signup-facebook]
 - PNPD-10,Signup with Facebook
 + Request with success (application/json)
 
         {
-            "token_facebook":"xxxxxxxxxxxx"
+            "grant_type": "password",
+            "client_id": "client",
+            "client_secret":"pass",
+            "username":"",
+            "password":"",
+            "token_facebook":"EAAYz6xSRxeABADX6hBiAmTfk2XWWjR3FUZBmlr3cZAbt4FMCafyTFkZB5uClPFU9GxlZAsjGYkTu2FcSwwAF75IJFYFCP5PpAeZAiPwHzpgflzahpgqSJnDCsiYsKZAJrNge1DjlaZB1MoXpMi1naxaZBwPZBDGXpacAZD"
         }
 
 + Response 200 (application/json)
 
         {
-            "messages":["Success"]
+          "access_token": "MwX87MfxIiLDvetjhnNO9VgGmfVhG3uJMXaLjblH",
+          "token_type": "Bearer",
+          "expires_in": 31536000,
+          "refresh_token": "2HWUj41pXk85vnYopEX6cJgF3OYc0S4wl2JWnSMl"
         }
         
 ## Group Reset password
