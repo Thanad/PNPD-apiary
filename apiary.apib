@@ -34,7 +34,15 @@ http://docs.pnpdauthen.apiary.io
             "client_id": "client",
             "client_secret":"pass",
             "username":"test@gmail.com",
-            "password":""
+            "password":"",
+            "profile":{
+                "display_name":"234234",
+                "first_name":"John",
+                "last_name":"Doe",
+                "taglines":"Hi",
+                "gender":"male",
+                "date_of_birth":"1981-02-21"
+            }
         }
         
 + Response 200 (application/json)
@@ -54,9 +62,8 @@ http://docs.pnpdauthen.apiary.io
             "grant_type": "password",
             "client_id": "client",
             "client_secret":"pass",
-            "username":"",
-            "password":"",
-            "token_facebook":"EAAYz6xSRxeABADX6hBiAmTfk2XWWjR3FUZBmlr3cZAbt4FMCafyTFkZB5uClPFU9GxlZAsjGYkTu2FcSwwAF75IJFYFCP5PpAeZAiPwHzpgflzahpgqSJnDCsiYsKZAJrNge1DjlaZB1MoXpMi1naxaZBwPZBDGXpacAZD"
+            "username":"facebook",
+            "password":"EAAYz6xSRxeABADX6hBiAmTfk2XWWjR3FUZBmlr3cZAbt4FMCafyTFkZB5uClPFU9GxlZAsjGYkTu2FcSwwAF75IJFYFCP5PpAeZAiPwHzpgflzahpgqSJnDCsiYsKZAJrNge1DjlaZB1MoXpMi1naxaZBwPZBDGXpacAZD"
         }
 
 + Response 200 (application/json)
