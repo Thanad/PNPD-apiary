@@ -17,10 +17,12 @@ HOST: http://pnpd.qa.maqe.com/api/v1
 - PNPD-72,Display continent in Explore page [Explore]
 
 ### Sprint 2
- - /MAQE/PNPD-65,Create own posts
- - /MAQE/PNPD-64,Update own posts
- - /MAQE/PNPD-63,Delete own posts
- - /MAQE/PNPD-128,Update customise my feed
+
+- PNPD-35,Assign location for share photo [Content Sharing]
+- PNPD-36,Post content with comment activity and location [Content Sharing]
+- PNPD-33,Take photo from camera [Content Sharing]
+- PNPD-79,Preview content photo [Content Sharing]
+
 
 ## Group API Authentication and User login API
 - PNPD-13,Log in with Facebook
@@ -981,3 +983,32 @@ http://docs.pnpdauthen.apiary.io
             }
           }
         }
+        
+        
+## Group Images or videos posting
+
+### Posts [/posts]
+- PNPD-35 Assign location for share photo [Content Sharing]
+- PNPD-36 Post content with comment activity and location [Content Sharing]
+
+#### Retrieves post from id [GET]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
+
+#### Creates a new post [POST]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
+
+#### Updates post [PUT]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
+
+#### Delete post [DELETE]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
+
+### User posts [/user/{id}/posts]
+
+#### Retrieves list of user's posts [GET]
++ Request follow a activity with success (application/json)
++ Response 200 (application/json)
