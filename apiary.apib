@@ -174,8 +174,12 @@ http://docs.pnpdauthen.apiary.io
 
 + Response 200 (application/json)
 
-
-        {"id":1,"email":"test@gmail.com","created_at":null,"updated_at":null}
+        {
+          "data": {
+            "id": 52,
+            "email": "thanad@gmail.com"
+          }
+        }
         
 + Request With authentication fail (application/json)
 + Response 401 (application/json)
