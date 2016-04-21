@@ -146,7 +146,7 @@ http://docs.pnpdauthen.apiary.io
 + Response 200 (application/json)
 
         {
-            "messages":["Success"]
+            "messages":"Success"
         }
         
 + Request with error (application/json)
@@ -194,45 +194,72 @@ http://docs.pnpdauthen.apiary.io
 - PNPD-63, Display continents in customize places
 - PNPD-59, Display places by the continent
 
-### Follow [/follows]
+### Follow [/follows{?type}]
+
++ Parameters
+    + type (optional, Activity|Place|User) ... Type of object to retrieve ["Activity","Place","User"]
 
 #### Get all follow list [GET]
-+ Request follow a activity with success (application/json)
+
++ Request type=Place retrive followed place (application/json)
 + Response 200 (application/json)
 
         {
-            "places":[
+            "data":[
                 {
-                    "id": 1,
-                    "type": "countries",
-                    "name": "England",
-                },
-                {
-                    "id": 2,
-                    "type": "city",
-                    "name": "Madrid",
-                },
-                {
-                    "id": 3,
-                    "type": "city",
-                    "name": "Madrid",
-                },
-                {
-                    "id": 4,
-                    "type": "city",
-                    "name": "Rome",
+                  "id": 4,
+                  "type": "countries",
+                  "name": "THAILAND",
+                  "images": [
+                    "http://loremflickr.com/1000/1000/thailand,landmark/all"
+                  ],
+                  "location": {
+                    "latitude": -5.236828,
+                    "longitude": -90.14101
+                  },
+                  "endpoint": "/api/v1/countries/4/cities"
                 }
            ],
-           "activities":[
+           "meta": {
+            "pagination": {
+              "total": 1,
+              "count": 1,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": []
+            }
+          }
+        }
+
++ Request type=Activity retrive followed activity (application/json)
++ Response 200 (application/json)
+
+        {
+            "data":[
                 {
                     "id": 1,
                     "type": "activities",
                     "name": "PAI EAT",
+                    "images": [
+                      "http://loremflickr.com/1000/1000/food/all"
+                    ],
+                    "endpoint": "/api/v1/activities/1"
                 }
-           ]
+           ],
+           "meta": {
+            "pagination": {
+              "total": 1,
+              "count": 1,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": []
+            }
+          }
         }
 
-
+        
 #### Follow a activity or continent [POST]
 + Request follow a activity with success (application/json)
 
@@ -241,7 +268,7 @@ http://docs.pnpdauthen.apiary.io
 + Response 200 (application/json)
 
         {
-            "messages":["Success"]
+            "messages":"Success"
         }
 
 + Request Follow a continent with success (application/json)
@@ -251,7 +278,7 @@ http://docs.pnpdauthen.apiary.io
 + Response 200 (application/json)
 
         {
-            "messages":["Success"]
+            "messages":"Success"
         }
         
         
@@ -268,7 +295,7 @@ http://docs.pnpdauthen.apiary.io
 + Response 200 (application/json)
 
         {
-            "messages":["Success"]
+            "messages":"Success"
         }
 
 
@@ -1056,21 +1083,73 @@ http://docs.pnpdauthen.apiary.io
         
 ## Group Images or videos posting
 
+    
 ### Posts [/posts]
+
 - PNPD-35 Assign location for share photo [Content Sharing]
 - PNPD-36 Post content with comment activity and location [Content Sharing]
 
+
++ Model (application/json)
+
+        {
+          "data": {
+            "id": 122,
+            "place_id": 0,
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "number_likes": 0,
+            "number_comments": 0,
+            "highlight_piduay": null,
+            "latitude": 0,
+            "longitude": 0,
+            "elevation": null,
+            "created_at": "2016-04-21 07:26:56",
+            "updated_at": "2016-04-21 07:26:56"
+          }
+        }
+    
+
 #### Retrieves post from id [GET]
+
 + Request follow a activity with success (application/json)
-+ Response 200 (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+    
+    [Posts][]
 
 #### Creates a new post [POST]
 + Request follow a activity with success (application/json)
-+ Response 200 (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            {
+                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "latitude": 0,
+                "longitude": 0,
+                "elevation": null,
+                "photos":[{
+                    "bucket":"https://s3-ap-southeast-1.amazonaws.com/pnpd-upload",
+                    "path":"/photos/B/BDS4OPjbkWn.png"
+                }]
+            }
+
++ Response 200
+    
+    [Posts][]
 
 #### Updates post [PUT]
 + Request follow a activity with success (application/json)
-+ Response 200 (application/json)
++ Response 200
+    
+    [Posts][]
 
 #### Delete post [DELETE]
 + Request follow a activity with success (application/json)
