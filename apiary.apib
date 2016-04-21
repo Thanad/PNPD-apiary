@@ -197,7 +197,7 @@ http://docs.pnpdauthen.apiary.io
 ### Follow [/follows{?type}]
 
 + Parameters
-    + type (optional, Activity|Place|User) ... Type of object to retrieve ["Activity","Place","User"]
+    + type (optional, activities|places|users) ... Type of object to retrieve ["Activity","Place","User"]
 
 #### Get all follow list [GET]
 
@@ -208,7 +208,8 @@ http://docs.pnpdauthen.apiary.io
             "data":[
                 {
                   "id": 4,
-                  "type": "countries",
+                  "type": "places",
+                  "place_type": "countries",
                   "name": "THAILAND",
                   "images": [
                     "http://loremflickr.com/1000/1000/thailand,landmark/all"
