@@ -1105,7 +1105,7 @@ http://docs.pnpdauthen.apiary.io
 
 + Response 200
     
-    [Posts][]
+    [Post][]
     
 + Request Add post with video (application/json)
 
@@ -1153,7 +1153,7 @@ http://docs.pnpdauthen.apiary.io
           }
         }
 
-### Posts [/posts/{post_id}]
+### Post [/posts/{post_id}]
 
 - PNPD-35 Assign location for share photo [Content Sharing]
 - PNPD-36 Post content with comment activity and location [Content Sharing]
@@ -1196,21 +1196,29 @@ http://docs.pnpdauthen.apiary.io
 
 + Response 200
     
-    [Posts][]
+    [Post][]
 
 
 #### Updates post [PUT]
 + Request follow a activity with success (application/json)
+
+        {
+            "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+            
 + Response 200 
     
-    [Posts][]
+    [Post][]
 
 #### Delete post [DELETE]
 + Request follow a activity with success (application/json)
 + Response 200 (application/json)
 
-### User posts [/user/{id}/posts]
+### User posts [/users/{user_id}/posts]
+
++ Parameters 
+    + user_id:1
 
 #### Retrieves list of user's posts [GET]
-+ Request follow a activity with success (application/json)
++ Request Get user's posts (application/json)
 + Response 200 (application/json)
