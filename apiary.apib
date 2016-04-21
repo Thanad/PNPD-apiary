@@ -1083,18 +1083,54 @@ http://docs.pnpdauthen.apiary.io
         
 ## Group Images or videos posting
 
+### New post [POST /posts]
++ Request Add post with photo (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
     
-### Posts [/posts]
+            {
+                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "latitude": 0,
+                "longitude": 0,
+                "elevation": null,
+                "photos":[{
+                    "bucket":"https://s3-ap-southeast-1.amazonaws.com/pnpd-upload",
+                    "path":"/photos/B/BDS4OPjbkWn.jpeg"
+                }]
+            }
 
-- PNPD-35 Assign location for share photo [Content Sharing]
-- PNPD-36 Post content with comment activity and location [Content Sharing]
++ Response 200
+    
+    [Posts][]
+    
++ Request Add post with video (application/json)
 
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            {
+                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "latitude": 0,
+                "longitude": 0,
+                "elevation": null,
+                "videos":[{
+                    "bucket":"https://s3-ap-southeast-1.amazonaws.com/pnpd-upload",
+                    "path":"/videos/B/BDS4OPjbkWn.mp4"
+                }]
+            }
 
-+ Model (application/json)
++ Response 200 (application/json)
 
         {
           "data": {
-            "id": 122,
+            "id": 124,
             "place_id": 0,
             "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "number_likes": 0,
@@ -1103,8 +1139,49 @@ http://docs.pnpdauthen.apiary.io
             "latitude": 0,
             "longitude": 0,
             "elevation": null,
-            "created_at": "2016-04-21 07:26:56",
-            "updated_at": "2016-04-21 07:26:56"
+            "created_at": "2016-04-21 07:50:41",
+            "updated_at": "2016-04-21 07:50:41",
+            "photos": [],
+            "videos": [
+              {
+                "id": 288,
+                "created_at": "2016-04-21 07:50:41",
+                "updated_at": "2016-04-21 07:50:41",
+                "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/videos/B/BDS4OPjbkWn.mp4"
+              }
+            ]
+          }
+        }
+
+### Posts [/posts/{post_id}]
+
+- PNPD-35 Assign location for share photo [Content Sharing]
+- PNPD-36 Post content with comment activity and location [Content Sharing]
+
++ Model (application/json)
+
+        {
+          "data": {
+            "id": 124,
+            "place_id": 0,
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "number_likes": 0,
+            "number_comments": 0,
+            "highlight_piduay": null,
+            "latitude": 0,
+            "longitude": 0,
+            "elevation": null,
+            "created_at": "2016-04-21 07:50:41",
+            "updated_at": "2016-04-21 07:50:41",
+            "photos": [
+              {
+                "id": 288,
+                "created_at": "2016-04-21 07:50:41",
+                "updated_at": "2016-04-21 07:50:41",
+                "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/B/BDS4OPjbkWn.jpeg"
+              }
+            ],
+            "videos": []
           }
         }
     
@@ -1121,33 +1198,10 @@ http://docs.pnpdauthen.apiary.io
     
     [Posts][]
 
-#### Creates a new post [POST]
-+ Request follow a activity with success (application/json)
-
-    + Headers
-            
-            Authorization: Bearer {access_token}
-            
-    + Body
-    
-            {
-                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "latitude": 0,
-                "longitude": 0,
-                "elevation": null,
-                "photos":[{
-                    "bucket":"https://s3-ap-southeast-1.amazonaws.com/pnpd-upload",
-                    "path":"/photos/B/BDS4OPjbkWn.png"
-                }]
-            }
-
-+ Response 200
-    
-    [Posts][]
 
 #### Updates post [PUT]
 + Request follow a activity with success (application/json)
-+ Response 200
++ Response 200 
     
     [Posts][]
 
