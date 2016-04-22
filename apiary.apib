@@ -1305,7 +1305,7 @@ http://docs.pnpdauthen.apiary.io
 ### User posts [/users/{user_id}/posts]
 
 + Parameters 
-    + user_id:1
+    + user_id (number, optional,  `1`) ... User id.
 
 #### Retrieves list of user's posts [GET]
 + Request Get user's posts (application/json)
@@ -1313,15 +1313,15 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Timeline
 
-### Home feed [/feeds{?per_page,until,since,filter}]
+### Home feed [/feeds{?per_page,id_lt,id_gt}]
 
 - PNPD-67 Display Painai feed
 
 + Parameters
 
-    + per_page = `10` (number, optional,  `1`) ... limit of posts.
-    + until (Unix timestamp, optional,`1399020297`) ... until of posts.
-    + since (Unix timestamp, optional,`1399020297`) ... since of posts.
+    + per_page = `25` (number, optional,  `1`) ... limit of posts.
+    + id_lt (number, optional,`123`) ... Filter the feed on ids smaller than the given value.
+    + id_gt (number, optional,`123`) ... Filter the feed on ids greater than the given value.
 
 + Model (application/json)
 
