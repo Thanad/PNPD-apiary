@@ -1306,4 +1306,21 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Timeline
 
-### User feed [/feeds]
+### Home feed [/feeds{?per_page,until,since,filter}]
+
++ Parameters
+
+    + per_page = `10` (number, optional,  `1`) ... limit of posts.
+    + until (Unix timestamp, optional,`1399020297`) ... until of posts.
+    + since (Unix timestamp, optional,`1399020297`) ... since of posts.
+
++ Model (application/json)
+
+        {}
+        
+### Get feed for home[GET]
+
++ Request follow a activity with success (application/json)
++ Response 200
+    
+    [Home feed][]
