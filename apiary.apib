@@ -23,6 +23,12 @@ HOST: http://pnpd.uat.maqe.com/api/v1
 - PNPD-33,Take photo from camera [Content Sharing]
 - PNPD-79,Preview content photo [Content Sharing]
 
+### Sprint 3
+
+- PNPD-67,Display Painai feed
+- PNPD-35,Assign location for share photo
+- PNPD-36,Post content with comment, activity and location
+
 
 ## Group API Authentication and User login API
 - PNPD-13,Log in with Facebook
@@ -1133,6 +1139,10 @@ http://docs.pnpdauthen.apiary.io
 ## Group Images or videos posting
 
 ### New post [POST /posts]
+
+- PNPD-35 Assign location for share photo [Content Sharing]
+- PNPD-36 Post content with comment activity and location [Content Sharing]
+
 + Request Add post with photo (application/json)
 
     + Headers
@@ -1222,9 +1232,6 @@ http://docs.pnpdauthen.apiary.io
 
 ### Post [/posts/{post_id}]
 
-- PNPD-35 Assign location for share photo [Content Sharing]
-- PNPD-36 Post content with comment activity and location [Content Sharing]
-
 + Model (application/json)
 
         {
@@ -1308,6 +1315,8 @@ http://docs.pnpdauthen.apiary.io
 
 ### Home feed [/feeds{?per_page,until,since,filter}]
 
+- PNPD-67 Display Painai feed
+
 + Parameters
 
     + per_page = `10` (number, optional,  `1`) ... limit of posts.
@@ -1316,9 +1325,20 @@ http://docs.pnpdauthen.apiary.io
 
 + Model (application/json)
 
-        {}
-        
-### Get feed for home[GET]
+        {
+            "data":[
+            ],
+            "meta": {
+                "pagination": {
+                  "per_page": 8,
+                  "current_page": 1,
+                  "total_pages": 1,
+                  "links": []
+                }
+            }
+        }
+
+#### Get feed for home [GET]
 
 + Request follow a activity with success (application/json)
 + Response 200
