@@ -3,6 +3,8 @@ HOST: http://pnpd.uat.maqe.com/api/v1
 
 # PNPD API
 
+## Sprint
+
 ### Sprint 1
 - PNPD-14,Log in with e-mail [User]
 - PNPD-13,Log in with Facebook [User]
@@ -28,6 +30,16 @@ HOST: http://pnpd.uat.maqe.com/api/v1
 - PNPD-67,Display Painai feed
 - PNPD-35,Assign location for share photo
 - PNPD-36,Post content with comment, activity and location
+
+## HTTP Status Code Summary
+
+- 200 OK - Everything worked as expected.
+- 400 Bad Request - Often missing a required parameter.
+- 401 Unauthorized - No valid API key provided.
+- 402 Request Failed - Parameters were valid but request failed.
+- 403 Forbidden - Insufficient privileges to access requested resource.
+- 404 Not Found - The requested item doesn’t exist.
+- 50x Server errors - something went wrong on api domain’s end.
 
 
 ## Group API Authentication and User login API
