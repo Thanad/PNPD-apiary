@@ -754,83 +754,13 @@ http://docs.pnpdauthen.apiary.io
                 "longitude": 39.199439
               },
               "endpoint": "/api/v1/countries/15/cities"
-            },
-            {
-              "id": 16,
-              "type": "places",
-              "place_type": "countries",
-              "name": "Latvia",
-              "images": [
-                "http://loremflickr.com/1000/1000/latvia,landmark/all"
-              ],
-              "location": {
-                "latitude": 9.393018,
-                "longitude": 0.70210599999999
-              },
-              "endpoint": "/api/v1/countries/16/cities"
-            },
-            {
-              "id": 17,
-              "type": "places",
-              "place_type": "countries",
-              "name": "Lithuania",
-              "images": [
-                "http://loremflickr.com/1000/1000/lithuania,landmark/all"
-              ],
-              "location": {
-                "latitude": -7.245977,
-                "longitude": 21.411105
-              },
-              "endpoint": "/api/v1/countries/17/cities"
-            },
-            {
-              "id": 18,
-              "type": "places",
-              "place_type": "countries",
-              "name": "Luxembourg",
-              "images": [
-                "http://loremflickr.com/1000/1000/luxembourg,landmark/all"
-              ],
-              "location": {
-                "latitude": 63.376938,
-                "longitude": 100.750017
-              },
-              "endpoint": "/api/v1/countries/18/cities"
-            },
-            {
-              "id": 19,
-              "type": "places",
-              "place_type": "countries",
-              "name": "Malta",
-              "images": [
-                "http://loremflickr.com/1000/1000/malta,landmark/all"
-              ],
-              "location": {
-                "latitude": 87.108971,
-                "longitude": -142.270847
-              },
-              "endpoint": "/api/v1/countries/19/cities"
-            },
-            {
-              "id": 20,
-              "type": "places",
-              "place_type": "countries",
-              "name": "Netherlands",
-              "images": [
-                "http://loremflickr.com/1000/1000/netherlands,landmark/all"
-              ],
-              "location": {
-                "latitude": -39.176207,
-                "longitude": 84.936477
-              },
-              "endpoint": "/api/v1/countries/20/cities"
             }
           ],
           "meta": {
             "pagination": {
               "total": 28,
-              "count": 20,
-              "per_page": 20,
+              "count": 15,
+              "per_page": 15,
               "current_page": 1,
               "total_pages": 2,
               "links": {
@@ -842,10 +772,245 @@ http://docs.pnpdauthen.apiary.io
         
 
 
-#### Display cities in country [GET /countries/{country}/cities]
+#### Display states in country [GET /countries/{country}/states]
 
 + Parameters 
     + country:4
+    
++ Request (application/json)
++ Response 200 (application/json)
+
+        {
+          "data": [
+            {
+              "id": 1,
+              "type":"places",
+              "place_type": "states",
+              "name": "Bangkok",
+              "images": [
+                "http://loremflickr.com/1000/1000/bangkok/all"
+              ],
+              "location": {
+                "latitude": -28.783158,
+                "longitude": 93.934667
+              },
+              "endpoint": "/api/v1/states/1/cities"
+            },
+            {
+              "id": 2,
+              "type":"places",
+              "place_type": "states",
+              "name": "Nonthaburi",
+              "images": [
+                "http://loremflickr.com/1000/1000/nonthaburi/all"
+              ],
+              "location": {
+                "latitude": 27.141406,
+                "longitude": 38.70659
+              },
+              "endpoint": "/api/v1/states/2/cities"
+            },
+            {
+              "id": 3,
+              "type":"places",
+              "place_type": "states",
+              "name": "Nakhon Ratchasima",
+              "images": [
+                "http://loremflickr.com/1000/1000/nakhon%20ratchasima/all"
+              ],
+              "location": {
+                "latitude": 42.200942,
+                "longitude": 153.367495
+              },
+              "endpoint": "/api/v1/states/3/cities"
+            },
+            {
+              "id": 4,
+              "type":"places",
+              "place_type": "states",
+              "name": "Chiang Mai",
+              "images": [
+                "http://loremflickr.com/1000/1000/chiang%20mai/all"
+              ],
+              "location": {
+                "latitude": -24.724471,
+                "longitude": 52.077748
+              },
+              "endpoint": "/api/v1/states/4/cities"
+            },
+            {
+              "id": 5,
+              "type":"places",
+              "place_type": "states",
+              "name": "Hat Yai",
+              "images": [
+                "http://loremflickr.com/1000/1000/hat%20yai/all"
+              ],
+              "location": {
+                "latitude": -22.25937,
+                "longitude": -172.734359
+              },
+              "endpoint": "/api/v1/states/5/cities"
+            },
+            {
+              "id": 6,
+              "type":"places",
+              "place_type": "states",
+              "name": "Udon Thani",
+              "images": [
+                "http://loremflickr.com/1000/1000/udon%20thani/all"
+              ],
+              "location": {
+                "latitude": -85.711041,
+                "longitude": -29.086084
+              },
+              "endpoint": "/api/v1/states/6/cities"
+            },
+            {
+              "id": 7,
+              "type":"places",
+              "place_type": "states",
+              "name": "Pak Kret",
+              "images": [
+                "http://loremflickr.com/1000/1000/pak%20kret/all"
+              ],
+              "location": {
+                "latitude": -40.133869,
+                "longitude": 38.787225
+              },
+              "endpoint": "/api/v1/states/7/cities"
+            },
+            {
+              "id": 8,
+              "type":"places",
+              "place_type": "states",
+              "name": "Khon Kaen",
+              "images": [
+                "http://loremflickr.com/1000/1000/khon%20kaen/all"
+              ],
+              "location": {
+                "latitude": 15.784941,
+                "longitude": 53.910232
+              },
+              "endpoint": "/api/v1/states/8/cities"
+            },
+            {
+              "id": 9,
+              "type":"places",
+              "place_type": "states",
+              "name": "Chaophraya Surasak",
+              "images": [
+                "http://loremflickr.com/1000/1000/chaophraya%20surasak/all"
+              ],
+              "location": {
+                "latitude": -79.027831,
+                "longitude": 80.962387
+              },
+              "endpoint": "/api/v1/states/9/cities"
+            },
+            {
+              "id": 10,
+              "type":"places",
+              "place_type": "states",
+              "name": "Ubon Ratchathani",
+              "images": [
+                "http://loremflickr.com/1000/1000/ubon%20ratchathani/all"
+              ],
+              "location": {
+                "latitude": 57.985158,
+                "longitude": -41.076543
+              },
+              "endpoint": "/api/v1/states/10/cities"
+            },
+            {
+              "id": 11,
+              "type":"places",
+              "place_type": "states",
+              "name": "Nakhon Si",
+              "images": [
+                "http://loremflickr.com/1000/1000/nakhon%20si/all"
+              ],
+              "location": {
+                "latitude": -47.485742,
+                "longitude": 49.635404
+              },
+              "endpoint": "/api/v1/states/11/cities"
+            },
+            {
+              "id": 12,
+              "type":"places",
+              "place_type": "states",
+              "name": "Nakhon Sawan",
+              "images": [
+                "http://loremflickr.com/1000/1000/nakhon%20sawan/all"
+              ],
+              "location": {
+                "latitude": 39.040502,
+                "longitude": -132.355167
+              },
+              "endpoint": "/api/v1/states/12/cities"
+            },
+            {
+              "id": 13,
+              "type":"places",
+              "place_type": "states",
+              "name": "Nakhon Pathom",
+              "images": [
+                "http://loremflickr.com/1000/1000/nakhon%20pathom/all"
+              ],
+              "location": {
+                "latitude": 21.388041,
+                "longitude": -86.476997
+              },
+              "endpoint": "/api/v1/states/13/cities"
+            },
+            {
+              "id": 14,
+              "type":"places",
+              "place_type": "states",
+              "name": "Phitsanulok",
+              "images": [
+                "http://loremflickr.com/1000/1000/phitsanulok/all"
+              ],
+              "location": {
+                "latitude": -25.835869,
+                "longitude": -32.362984
+              },
+              "endpoint": "/api/v1/states/14/cities"
+            },
+            {
+              "id": 15,
+              "type":"places",
+              "place_type": "states",
+              "name": "Pattaya",
+              "images": [
+                "http://loremflickr.com/1000/1000/pattaya/all"
+              ],
+              "location": {
+                "latitude": 59.072351,
+                "longitude": -48.952759
+              },
+              "endpoint": "/api/v1/states/15/cities"
+            }
+          ],
+          "meta": {
+            "pagination": {
+              "total": 30,
+              "count": 15,
+              "per_page": 15,
+              "current_page": 1,
+              "total_pages": 2,
+              "links": {
+                "next": "/api/v1/countries/2/states?page=2"
+              }
+            }
+          }
+        }
+
+#### Display cities in state [GET /states/{state}/cities]
+
++ Parameters 
+    + state:4
     
 + Request (application/json)
 + Response 200 (application/json)
@@ -1047,106 +1212,21 @@ http://docs.pnpdauthen.apiary.io
                 "longitude": -32.362984
               },
               "endpoint": "/api/v1/cities/14"
-            },
-            {
-              "id": 15,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Pattaya",
-              "images": [
-                "http://loremflickr.com/1000/1000/pattaya/all"
-              ],
-              "location": {
-                "latitude": 59.072351,
-                "longitude": -48.952759
-              },
-              "endpoint": "/api/v1/cities/15"
-            },
-            {
-              "id": 16,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Songkhla",
-              "images": [
-                "http://loremflickr.com/1000/1000/songkhla/all"
-              ],
-              "location": {
-                "latitude": -15.724846,
-                "longitude": 31.327401
-              },
-              "endpoint": "/api/v1/cities/16"
-            },
-            {
-              "id": 17,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Surat Thani",
-              "images": [
-                "http://loremflickr.com/1000/1000/surat%20thani/all"
-              ],
-              "location": {
-                "latitude": -62.95442,
-                "longitude": 153.361747
-              },
-              "endpoint": "/api/v1/cities/17"
-            },
-            {
-              "id": 18,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Rangsit",
-              "images": [
-                "http://loremflickr.com/1000/1000/rangsit/all"
-              ],
-              "location": {
-                "latitude": -69.038688,
-                "longitude": -23.151541
-              },
-              "endpoint": "/api/v1/cities/18"
-            },
-            {
-              "id": 19,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Yala",
-              "images": [
-                "http://loremflickr.com/1000/1000/yala/all"
-              ],
-              "location": {
-                "latitude": -80.542335,
-                "longitude": -165.771632
-              },
-              "endpoint": "/api/v1/cities/19"
-            },
-            {
-              "id": 20,
-              "type":"places",
-              "place_type": "cities",
-              "name": "Phuket",
-              "images": [
-                "http://loremflickr.com/1000/1000/phuket/all"
-              ],
-              "location": {
-                "latitude": 37.710823,
-                "longitude": 73.093144
-              },
-              "endpoint": "/api/v1/cities/20"
             }
           ],
           "meta": {
             "pagination": {
               "total": 30,
-              "count": 20,
-              "per_page": 20,
+              "count": 15,
+              "per_page": 15,
               "current_page": 1,
               "total_pages": 2,
               "links": {
-                "next": "/api/v1/countries/2/cities?page=2"
+                "next": "/api/v1/states/2/cities?page=2"
               }
             }
           }
         }
-        
         
 ## Group Images or videos posting
 
