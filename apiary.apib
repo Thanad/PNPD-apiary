@@ -212,198 +212,7 @@ http://docs.pnpdauthen.apiary.io
 - PNPD-63, Display continents in customize places
 - PNPD-59, Display places by the continent
 
-### Follow [/follows{?type}]
-
-+ Parameters
-    + type (optional, activities|places|users) ... Type of object to retrieve ["Activity","Place","User"]
-
-#### Get all follow list [GET]
-
-+ Request type=Place retrive followed place (application/json)
-+ Response 200 (application/json)
-
-        {
-            "data":[
-                {
-                  "id": 4,
-                  "type": "places",
-                  "place_type": "countries",
-                  "name": "THAILAND",
-                  "images": [
-                    "http://loremflickr.com/1000/1000/thailand,landmark/all"
-                  ],
-                  "location": {
-                    "latitude": -5.236828,
-                    "longitude": -90.14101
-                  },
-                  "endpoint": "/api/v1/countries/4/cities"
-                }
-           ],
-           "meta": {
-            "pagination": {
-              "total": 1,
-              "count": 1,
-              "per_page": 8,
-              "current_page": 1,
-              "total_pages": 1,
-              "links": []
-            }
-          }
-        }
-
-+ Request type=Activity retrive followed activity (application/json)
-+ Response 200 (application/json)
-
-        {
-            "data":[
-                {
-                    "id": 1,
-                    "type": "activities",
-                    "name": "PAI EAT",
-                    "images": [
-                      "http://loremflickr.com/1000/1000/food/all"
-                    ],
-                    "endpoint": "/api/v1/activities/1"
-                }
-           ],
-           "meta": {
-            "pagination": {
-              "total": 1,
-              "count": 1,
-              "per_page": 8,
-              "current_page": 1,
-              "total_pages": 1,
-              "links": []
-            }
-          }
-        }
-
-        
-#### Follow a activity or continent [POST]
-+ Request follow a activity with success (application/json)
-
-        [{"type":"activities","id":1}]
-        
-+ Response 200 (application/json)
-
-        {
-            "messages":"Success"
-        }
-
-+ Request Follow a continent with success (application/json)
-
-        [{"type":"continents","id":1}]
-        
-+ Response 200 (application/json)
-
-        {
-            "messages":"Success"
-        }
-        
-        
-#### Unfollow a activity or continent [DELETE]
-+ Request unfollow a activity with success (application/json)
-
-        [
-            {
-                "type": "activities",
-                "id: 1
-            }
-        ]
-        
-+ Response 200 (application/json)
-
-        {
-            "messages":"Success"
-        }
-
-
-### Activities [/activities]
-
-#### List all activities [GET]
-
-+ Request (application/json)
-+ Response 200 (application/json)
-
-        [
-          {
-            "id": 1,
-            "type": "activities",
-            "name": "PAI EAT",
-            "images": [
-              "http://loremflickr.com/1000/1000/food/all"
-            ],
-            "endpoint": "/api/v1/activities/1"
-          },
-          {
-            "id": 2,
-            "type": "activities",
-            "name": "PAI DRINK",
-            "images": [
-              "http://loremflickr.com/1000/1000/drink,beverage"
-            ],
-            "endpoint": "/api/v1/activities/2"
-          },
-          {
-            "id": 3,
-            "type": "activities",
-            "name": "PAI SHOP",
-            "images": [
-              "http://loremflickr.com/1000/1000/shopping"
-            ],
-            "endpoint": "/api/v1/activities/3"
-          },
-          {
-            "id": 4,
-            "type": "activities",
-            "name": "PAI SLEEP",
-            "images": [
-              "http://loremflickr.com/1000/1000/hotel,room/all"
-            ],
-            "endpoint": "/api/v1/activities/4"
-          },
-          {
-            "id": 5,
-            "type": "activities",
-            "name": "PAI CHECK-IN",
-            "images": [
-              "http://loremflickr.com/1000/1000/landmark"
-            ],
-            "endpoint": "/api/v1/activities/5"
-          },
-          {
-            "id": 6,
-            "type": "activities",
-            "name": "PAI ADVENTURE",
-            "images": [
-              "http://loremflickr.com/1000/1000/adventure"
-            ],
-            "endpoint": "/api/v1/activities/6"
-          },
-          {
-            "id": 7,
-            "type": "activities",
-            "name": "PAI NATURE",
-            "images": [
-              "http://loremflickr.com/1000/1000/nature"
-            ],
-            "endpoint": "/api/v1/activities/7"
-          },
-          {
-            "id": 8,
-            "type": "activities",
-            "name": "PAI SPORT",
-            "images": [
-              "http://loremflickr.com/1000/1000/sport"
-            ],
-            "endpoint": "/api/v1/activities/8"
-          }
-        ]
-
-
-### Places [/places]
-
-#### Display customize places [GET]
+#### Display customize places [GET /places]
 + Request (application/json)
 + Response 200 (application/json)
 
@@ -534,6 +343,196 @@ http://docs.pnpdauthen.apiary.io
           }
         }
         
+### Follow [/follows{?type}]
+
++ Parameters
+    + type (optional, activities|places|users) ... Type of object to retrieve ["Activity","Place","User"]
+
+#### Get all follow list [GET]
+
++ Request type=Place retrive followed place (application/json)
++ Response 200 (application/json)
+
+        {
+            "data":[
+                {
+                  "id": 4,
+                  "type": "places",
+                  "place_type": "countries",
+                  "name": "THAILAND",
+                  "images": [
+                    "http://loremflickr.com/1000/1000/thailand,landmark/all"
+                  ],
+                  "location": {
+                    "latitude": -5.236828,
+                    "longitude": -90.14101
+                  },
+                  "endpoint": "/api/v1/countries/4/cities"
+                }
+           ],
+           "meta": {
+            "pagination": {
+              "total": 1,
+              "count": 1,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": []
+            }
+          }
+        }
+
++ Request type=Activity retrive followed activity (application/json)
++ Response 200 (application/json)
+
+        {
+            "data":[
+                {
+                    "id": 1,
+                    "type": "activities",
+                    "name": "PAI EAT",
+                    "images": [
+                      "http://loremflickr.com/1000/1000/food/all"
+                    ],
+                    "endpoint": "/api/v1/activities/1"
+                }
+           ],
+           "meta": {
+            "pagination": {
+              "total": 1,
+              "count": 1,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": []
+            }
+          }
+        }
+
+        
+#### Follow a activity or continent [POST]
++ Request follow a activity with success (application/json)
+
+        [{"type":"activities","id":1}]
+        
++ Response 200 (application/json)
+
+        {
+            "messages":"Success"
+        }
+
++ Request Follow a continent with success (application/json)
+
+        [{"type":"continents","id":1}]
+        
++ Response 200 (application/json)
+
+        {
+            "messages":"Success"
+        }
+        
+        
+#### Unfollow a activity or continent [DELETE]
++ Request unfollow a activity with success (application/json)
+
+        [
+            {
+                "type": "activities",
+                "id: 1
+            }
+        ]
+        
++ Response 200 (application/json)
+
+        {
+            "messages":"Success"
+        }
+
+
+### Group Activities
+
+#### List all activities [GET /activities]
+
++ Request (application/json)
++ Response 200 (application/json)
+
+        [
+          {
+            "id": 1,
+            "type": "activities",
+            "name": "PAI EAT",
+            "images": [
+              "http://loremflickr.com/1000/1000/food/all"
+            ],
+            "endpoint": "/api/v1/activities/1"
+          },
+          {
+            "id": 2,
+            "type": "activities",
+            "name": "PAI DRINK",
+            "images": [
+              "http://loremflickr.com/1000/1000/drink,beverage"
+            ],
+            "endpoint": "/api/v1/activities/2"
+          },
+          {
+            "id": 3,
+            "type": "activities",
+            "name": "PAI SHOP",
+            "images": [
+              "http://loremflickr.com/1000/1000/shopping"
+            ],
+            "endpoint": "/api/v1/activities/3"
+          },
+          {
+            "id": 4,
+            "type": "activities",
+            "name": "PAI SLEEP",
+            "images": [
+              "http://loremflickr.com/1000/1000/hotel,room/all"
+            ],
+            "endpoint": "/api/v1/activities/4"
+          },
+          {
+            "id": 5,
+            "type": "activities",
+            "name": "PAI CHECK-IN",
+            "images": [
+              "http://loremflickr.com/1000/1000/landmark"
+            ],
+            "endpoint": "/api/v1/activities/5"
+          },
+          {
+            "id": 6,
+            "type": "activities",
+            "name": "PAI ADVENTURE",
+            "images": [
+              "http://loremflickr.com/1000/1000/adventure"
+            ],
+            "endpoint": "/api/v1/activities/6"
+          },
+          {
+            "id": 7,
+            "type": "activities",
+            "name": "PAI NATURE",
+            "images": [
+              "http://loremflickr.com/1000/1000/nature"
+            ],
+            "endpoint": "/api/v1/activities/7"
+          },
+          {
+            "id": 8,
+            "type": "activities",
+            "name": "PAI SPORT",
+            "images": [
+              "http://loremflickr.com/1000/1000/sport"
+            ],
+            "endpoint": "/api/v1/activities/8"
+          }
+        ]
+
+
+### Group Places
 
 #### Display countries by the continent [GET /continents/{continent}/countries]
 
@@ -1228,9 +1227,10 @@ http://docs.pnpdauthen.apiary.io
           }
         }
         
-## Group Images or videos posting
 
-### New post [POST /posts]
+### Group Posting
+
+#### New post [POST /posts]
 
 - PNPD-35 Assign location for share photo [Content Sharing]
 - PNPD-36 Post content with comment activity and location [Content Sharing]
@@ -1324,7 +1324,7 @@ http://docs.pnpdauthen.apiary.io
           }
         }
 
-### Post [/posts/{post_id}]
+#### Post [/posts/{post_id}]
 
 + Model (application/json)
 
