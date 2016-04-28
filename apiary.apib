@@ -1410,16 +1410,513 @@ http://docs.pnpdauthen.apiary.io
 + Model (application/json)
 
         {
-            "data":[
-            ],
-            "meta": {
-                "pagination": {
-                  "per_page": 8,
-                  "current_page": 1,
-                  "total_pages": 1,
-                  "links": []
+          "data": [
+            {
+              "id": 100,
+              "postable_id": 48,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": -41.167141,
+              "longitude": -8.947713,
+              "elevation": 3834,
+              "created_at": 1305989733,
+              "updated_at": 1387883384,
+              "highlight_paiduay": 0,
+              "photos": [],
+              "place": null,
+              "videos": [
+                {
+                  "id": 10,
+                  "created_at": "1974-08-11 11:12:41",
+                  "updated_at": "1992-03-20 17:05:29",
+                  "deleted_at": null,
+                  "url": "http://www.sample-videos.com/video/mp4/360/big_buck_bunny_360p_1mb.mp4"
                 }
+              ],
+              "activities": [
+                {
+                  "id": 2,
+                  "post_id": 100,
+                  "type": "activities",
+                  "name": "Pai drink",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=2"
+                },
+                {
+                  "id": 6,
+                  "post_id": 100,
+                  "type": "activities",
+                  "name": "Pai adventure",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=6"
+                }
+              ],
+              "user": {
+                "id": 48,
+                "name": "Estrella.Lesch@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/48"
+              }
+            },
+            {
+              "id": 99,
+              "postable_id": 43,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": 85.421867,
+              "longitude": 177.658642,
+              "elevation": 42,
+              "created_at": 351807679,
+              "updated_at": 238094412,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 98,
+                  "created_at": "1999-01-09 15:27:01",
+                  "updated_at": "2011-09-02 13:35:35",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 6,
+                  "post_id": 99,
+                  "type": "activities",
+                  "name": "Pai adventure",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=6"
+                },
+                {
+                  "id": 5,
+                  "post_id": 99,
+                  "type": "activities",
+                  "name": "Pai check-in",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=5"
+                }
+              ],
+              "user": {
+                "id": 43,
+                "name": "Klein.Jada@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/43"
+              }
+            },
+            {
+              "id": 98,
+              "postable_id": 3,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": 8.88655,
+              "longitude": 52.186368,
+              "elevation": 89731,
+              "created_at": 689189500,
+              "updated_at": 1220605754,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 97,
+                  "created_at": "1971-09-10 06:16:34",
+                  "updated_at": "1996-02-16 12:50:02",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 4,
+                  "post_id": 98,
+                  "type": "activities",
+                  "name": "Pai sleep",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=4"
+                },
+                {
+                  "id": 8,
+                  "post_id": 98,
+                  "type": "activities",
+                  "name": "Pai sport",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=8"
+                }
+              ],
+              "user": {
+                "id": 3,
+                "name": "Golda99@example.net",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/3"
+              }
+            },
+            {
+              "id": 97,
+              "postable_id": 7,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": 47.936764,
+              "longitude": -138.56439,
+              "elevation": 10000000,
+              "created_at": 688260809,
+              "updated_at": 504716371,
+              "highlight_paiduay": 1,
+              "photos": [
+                {
+                  "id": 96,
+                  "created_at": "1970-06-17 09:49:53",
+                  "updated_at": "1977-10-26 22:25:51",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 5,
+                  "post_id": 97,
+                  "type": "activities",
+                  "name": "Pai check-in",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=5"
+                },
+                {
+                  "id": 7,
+                  "post_id": 97,
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=7"
+                }
+              ],
+              "user": {
+                "id": 7,
+                "name": "Kirsten.Oberbrunner@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/7"
+              }
+            },
+            {
+              "id": 96,
+              "postable_id": 6,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": -53.257503,
+              "longitude": 107.83344,
+              "elevation": 0,
+              "created_at": 215486605,
+              "updated_at": 1248605009,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 95,
+                  "created_at": "2002-08-11 23:09:42",
+                  "updated_at": "1982-10-22 18:35:05",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 1,
+                  "post_id": 96,
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=1"
+                },
+                {
+                  "id": 4,
+                  "post_id": 96,
+                  "type": "activities",
+                  "name": "Pai sleep",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=4"
+                }
+              ],
+              "user": {
+                "id": 6,
+                "name": "Skiles.Verona@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/6"
+              }
+            },
+            {
+              "id": 95,
+              "postable_id": 32,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": 85.356276,
+              "longitude": 174.106682,
+              "elevation": 10000000,
+              "created_at": 403790836,
+              "updated_at": 1080855422,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 94,
+                  "created_at": "1979-09-20 14:37:55",
+                  "updated_at": "1976-08-14 01:46:49",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 8,
+                  "post_id": 95,
+                  "type": "activities",
+                  "name": "Pai sport",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=8"
+                },
+                {
+                  "id": 7,
+                  "post_id": 95,
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=7"
+                }
+              ],
+              "user": {
+                "id": 32,
+                "name": "Eliza69@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/32"
+              }
+            },
+            {
+              "id": 94,
+              "postable_id": 22,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": -32.974154,
+              "longitude": -144.386756,
+              "elevation": 2080040,
+              "created_at": 253820056,
+              "updated_at": 1012412790,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 93,
+                  "created_at": "1998-11-15 02:18:45",
+                  "updated_at": "1987-03-31 04:49:32",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 1,
+                  "post_id": 94,
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=1"
+                },
+                {
+                  "id": 7,
+                  "post_id": 94,
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=7"
+                }
+              ],
+              "user": {
+                "id": 22,
+                "name": "Koelpin.Leonie@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/22"
+              }
+            },
+            {
+              "id": 93,
+              "postable_id": 48,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": 49.011203,
+              "longitude": -34.823195,
+              "elevation": 705,
+              "created_at": 995221377,
+              "updated_at": 382797950,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 92,
+                  "created_at": "2005-12-03 13:41:17",
+                  "updated_at": "1987-05-10 13:20:47",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 1,
+                  "post_id": 93,
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=1"
+                },
+                {
+                  "id": 8,
+                  "post_id": 93,
+                  "type": "activities",
+                  "name": "Pai sport",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=8"
+                }
+              ],
+              "user": {
+                "id": 48,
+                "name": "Estrella.Lesch@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/48"
+              }
+            },
+            {
+              "id": 92,
+              "postable_id": 6,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": -34.574096,
+              "longitude": 4.728087,
+              "elevation": 10000000,
+              "created_at": 877201473,
+              "updated_at": 816076268,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 91,
+                  "created_at": "2001-09-29 19:45:07",
+                  "updated_at": "1979-10-19 02:48:11",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 5,
+                  "post_id": 92,
+                  "type": "activities",
+                  "name": "Pai check-in",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=5"
+                },
+                {
+                  "id": 1,
+                  "post_id": 92,
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=1"
+                }
+              ],
+              "user": {
+                "id": 6,
+                "name": "Skiles.Verona@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/6"
+              }
+            },
+            {
+              "id": 91,
+              "postable_id": 7,
+              "postable_type": "App\\Models\\User",
+              "place_id": 0,
+              "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+              "message": "",
+              "number_paiduays": 0,
+              "number_comments": 0,
+              "latitude": -34.834896,
+              "longitude": -125.549276,
+              "elevation": 958272,
+              "created_at": 1275370899,
+              "updated_at": 954108228,
+              "highlight_paiduay": 0,
+              "photos": [
+                {
+                  "id": 90,
+                  "created_at": "1980-04-14 08:09:44",
+                  "updated_at": "2003-10-28 20:26:43",
+                  "url": "http://loremflickr.com/500/500/paris,landmark/all"
+                }
+              ],
+              "place": null,
+              "videos": [],
+              "activities": [
+                {
+                  "id": 2,
+                  "post_id": 91,
+                  "type": "activities",
+                  "name": "Pai drink",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=2"
+                },
+                {
+                  "id": 8,
+                  "post_id": 91,
+                  "type": "activities",
+                  "name": "Pai sport",
+                  "images": [],
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=8"
+                }
+              ],
+              "user": {
+                "id": 7,
+                "name": "Kirsten.Oberbrunner@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/7"
+              }
             }
+          ],
+          "meta": {
+            "previous": "http://pnpd.qa.maqe.com/api/v1/feeds?id_lt=91",
+            "next": "http://pnpd.qa.maqe.com/api/v1/feeds?id_gt=100"
+          }
         }
 
 #### Get feed for home [GET]
