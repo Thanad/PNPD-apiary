@@ -1967,7 +1967,198 @@ http://docs.pnpdauthen.apiary.io
 + Request Get user's posts (application/json)
 + Response 200 (application/json)
 
-        {"data":[{"id":66,"place_id":229,"foursquare_venue_id":null,"message":"Quas facere sint aut debitis.","number_paiduays":"0","number_comments":"0","latitude":"-31.956440000000000","longitude":"-110.035619000000000","elevation":"51.0000000000000","created_at":1072285272,"updated_at":464642471,"highlight_paiduay":"0","photos":[],"place":{"id":229,"name":"Changwat Surat Thani","type":"places","place_type":"state","images":["http://loremflickr.com/500/500/Changwat%20Surat%20Thani,landmark/all"],"location":{"latitude":"0.000000000000000","longitude":"0.000000000000000"},"endpoint":"http://pnpd.uat.maqe.com/api/v1/states/229/cities"},"videos":[{"id":10,"created_at":"1992-11-05 22:45:33","updated_at":"1982-04-27 15:19:45","deleted_at":null,"url":"http://www.sample-videos.com/video/mp4/360/big_buck_bunny_360p_1mb.mp4"}],"activities":[{"id":7,"post_id":"66","type":"activities","name":"Pai nature","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=7"},{"id":3,"post_id":"66","type":"activities","name":"Pai shop","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=3"}],"user":{"id":3,"name":"Rodriguez.Leann@example.com","type":"users","endpoint":"http://pnpd.uat.maqe.com/api/v1/user/3"}},{"id":51,"place_id":141,"foursquare_venue_id":null,"message":"Nemo perspiciatis corrupti facilis quisquam rerum recusandae.","number_paiduays":"0","number_comments":"0","latitude":"-3.329159000000000","longitude":"-175.390960000000000","elevation":"8.0000000000000","created_at":1419785204,"updated_at":1379870004,"highlight_paiduay":"0","photos":[{"id":53,"created_at":"1981-02-09 22:52:23","updated_at":"1988-12-15 01:00:10","url":"http://loremflickr.com/500/500/India,landmark/all"}],"place":{"id":141,"name":"India","type":"places","place_type":"country","images":["http://loremflickr.com/500/500/India,landmark/all"],"location":{"latitude":"0.000000000000000","longitude":"0.000000000000000"},"endpoint":"http://pnpd.uat.maqe.com/api/v1/countries/141/states"},"videos":[],"activities":[{"id":1,"post_id":"51","type":"activities","name":"Pai eat","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=1"},{"id":8,"post_id":"51","type":"activities","name":"Pai sport","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=8"}],"user":{"id":3,"name":"Rodriguez.Leann@example.com","type":"users","endpoint":"http://pnpd.uat.maqe.com/api/v1/user/3"}},{"id":1,"place_id":182,"foursquare_venue_id":null,"message":"Sit et illo ut qui et veniam.","number_paiduays":"0","number_comments":"0","latitude":"88.375973000000000","longitude":"74.053006000000000","elevation":"70083.0000000000000","created_at":289735657,"updated_at":1207570929,"highlight_paiduay":"0","photos":[{"id":9,"created_at":"1987-08-08 18:40:10","updated_at":"1993-02-12 15:02:50","url":"http://loremflickr.com/500/500/Guyana,landmark/all"}],"place":{"id":182,"name":"Guyana","type":"places","place_type":"country","images":["http://loremflickr.com/500/500/Guyana,landmark/all"],"location":{"latitude":"0.000000000000000","longitude":"0.000000000000000"},"endpoint":"http://pnpd.uat.maqe.com/api/v1/countries/182/states"},"videos":[],"activities":[{"id":4,"post_id":"1","type":"activities","name":"Pai sleep","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=4"},{"id":1,"post_id":"1","type":"activities","name":"Pai eat","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=1"}],"user":{"id":3,"name":"Rodriguez.Leann@example.com","type":"users","endpoint":"http://pnpd.uat.maqe.com/api/v1/user/3"}}],"meta":{"previous":"http://pnpd.uat.maqe.com/api/v1/users/3/posts?id_lt=1","next":"http://pnpd.uat.maqe.com/api/v1/users/3/posts?id_gt=66"}}
+        {
+          "data": [
+            {
+              "id": 66,
+              "place_id": 229,
+              "foursquare_venue_id": null,
+              "message": "Quas facere sint aut debitis.",
+              "number_paiduays": "0",
+              "number_comments": "0",
+              "latitude": "-31.956440000000000",
+              "longitude": "-110.035619000000000",
+              "elevation": "51.0000000000000",
+              "created_at": 1072285272,
+              "updated_at": 464642471,
+              "highlight_paiduay": "0",
+              "photos": [],
+              "place": {
+                "id": 229,
+                "name": "Changwat Surat Thani",
+                "type": "places",
+                "place_type": "state",
+                "images": [
+                  "http://loremflickr.com/500/500/Changwat%20Surat%20Thani,landmark/all"
+                ],
+                "location": {
+                  "latitude": "0.000000000000000",
+                  "longitude": "0.000000000000000"
+                },
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/states/229/cities"
+              },
+              "videos": [
+                {
+                  "id": 10,
+                  "created_at": "1992-11-05 22:45:33",
+                  "updated_at": "1982-04-27 15:19:45",
+                  "deleted_at": null,
+                  "url": "http://www.sample-videos.com/video/mp4/360/big_buck_bunny_360p_1mb.mp4"
+                }
+              ],
+              "activities": [
+                {
+                  "id": 7,
+                  "post_id": "66",
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=7"
+                },
+                {
+                  "id": 3,
+                  "post_id": "66",
+                  "type": "activities",
+                  "name": "Pai shop",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=3"
+                }
+              ],
+              "user": {
+                "id": 3,
+                "name": "Rodriguez.Leann@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/user/3"
+              }
+            },
+            {
+              "id": 51,
+              "place_id": 141,
+              "foursquare_venue_id": null,
+              "message": "Nemo perspiciatis corrupti facilis quisquam rerum recusandae.",
+              "number_paiduays": "0",
+              "number_comments": "0",
+              "latitude": "-3.329159000000000",
+              "longitude": "-175.390960000000000",
+              "elevation": "8.0000000000000",
+              "created_at": 1419785204,
+              "updated_at": 1379870004,
+              "highlight_paiduay": "0",
+              "photos": [
+                {
+                  "id": 53,
+                  "created_at": "1981-02-09 22:52:23",
+                  "updated_at": "1988-12-15 01:00:10",
+                  "url": "http://loremflickr.com/500/500/India,landmark/all"
+                }
+              ],
+              "place": {
+                "id": 141,
+                "name": "India",
+                "type": "places",
+                "place_type": "country",
+                "images": [
+                  "http://loremflickr.com/500/500/India,landmark/all"
+                ],
+                "location": {
+                  "latitude": "0.000000000000000",
+                  "longitude": "0.000000000000000"
+                },
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/countries/141/states"
+              },
+              "videos": [],
+              "activities": [
+                {
+                  "id": 1,
+                  "post_id": "51",
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=1"
+                },
+                {
+                  "id": 8,
+                  "post_id": "51",
+                  "type": "activities",
+                  "name": "Pai sport",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=8"
+                }
+              ],
+              "user": {
+                "id": 3,
+                "name": "Rodriguez.Leann@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/user/3"
+              }
+            },
+            {
+              "id": 1,
+              "place_id": 182,
+              "foursquare_venue_id": null,
+              "message": "Sit et illo ut qui et veniam.",
+              "number_paiduays": "0",
+              "number_comments": "0",
+              "latitude": "88.375973000000000",
+              "longitude": "74.053006000000000",
+              "elevation": "70083.0000000000000",
+              "created_at": 289735657,
+              "updated_at": 1207570929,
+              "highlight_paiduay": "0",
+              "photos": [
+                {
+                  "id": 9,
+                  "created_at": "1987-08-08 18:40:10",
+                  "updated_at": "1993-02-12 15:02:50",
+                  "url": "http://loremflickr.com/500/500/Guyana,landmark/all"
+                }
+              ],
+              "place": {
+                "id": 182,
+                "name": "Guyana",
+                "type": "places",
+                "place_type": "country",
+                "images": [
+                  "http://loremflickr.com/500/500/Guyana,landmark/all"
+                ],
+                "location": {
+                  "latitude": "0.000000000000000",
+                  "longitude": "0.000000000000000"
+                },
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/countries/182/states"
+              },
+              "videos": [],
+              "activities": [
+                {
+                  "id": 4,
+                  "post_id": "1",
+                  "type": "activities",
+                  "name": "Pai sleep",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=4"
+                },
+                {
+                  "id": 1,
+                  "post_id": "1",
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=1"
+                }
+              ],
+              "user": {
+                "id": 3,
+                "name": "Rodriguez.Leann@example.com",
+                "type": "users",
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/user/3"
+              }
+            }
+          ],
+          "meta": {
+            "previous": "http://pnpd.uat.maqe.com/api/v1/users/3/posts?id_lt=1",
+            "next": "http://pnpd.uat.maqe.com/api/v1/users/3/posts?id_gt=66"
+          }
+        }
 
 
 ### Place feed [/place/{place_id}/posts]
@@ -1979,4 +2170,150 @@ http://docs.pnpdauthen.apiary.io
 + Request Get user's posts (application/json)
 + Response 200 (application/json)
 
-        {"data":[{"id":99,"place_id":211,"foursquare_venue_id":null,"message":"Et porro eligendi est voluptates sed et aut.","number_paiduays":"0","number_comments":"0","latitude":"-33.961605000000000","longitude":"31.936179000000000","elevation":"8205253.0000000000000","created_at":277044320,"updated_at":1102712901,"highlight_paiduay":"0","photos":[{"id":94,"created_at":"2013-12-05 21:25:45","updated_at":"1996-01-24 13:32:38","url":"http://loremflickr.com/500/500/Lampang,landmark/all"}],"place":{"id":211,"name":"Lampang","type":"places","place_type":"city","images":["http://loremflickr.com/500/500/Lampang,landmark/all"],"location":{"latitude":"0.000000000000000","longitude":"0.000000000000000"},"endpoint":"http://pnpd.uat.maqe.com/api/v1/cities/211/places"},"videos":[],"activities":[{"id":7,"post_id":"99","type":"activities","name":"Pai nature","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=7"},{"id":1,"post_id":"99","type":"activities","name":"Pai eat","images":[],"endpoint":"http://pnpd.uat.maqe.com/api/v1/activities?id=1"}],"user":{"id":18,"name":"Roel65@example.org","type":"users","endpoint":"http://pnpd.uat.maqe.com/api/v1/user/18"}}],"meta":{"previous":"http://pnpd.uat.maqe.com/api/v1/feeds?id_lt=99","next":"http://pnpd.uat.maqe.com/api/v1/feeds?id_gt=99"}}
+        {
+          "data": [
+            {
+              "id": 99,
+              "place_id": 211,
+              "foursquare_venue_id": null,
+              "message": "Et porro eligendi est voluptates sed et aut.",
+              "number_paiduays": "0",
+              "number_comments": "0",
+              "latitude": "-33.961605000000000",
+              "longitude": "31.936179000000000",
+              "elevation": "8205253.0000000000000",
+              "created_at": 277044320,
+              "updated_at": 1102712901,
+              "highlight_paiduay": "0",
+              "photos": [
+                {
+                  "id": 94,
+                  "created_at": "2013-12-05 21:25:45",
+                  "updated_at": "1996-01-24 13:32:38",
+                  "url": "http://loremflickr.com/500/500/Lampang,landmark/all"
+                }
+              ],
+              "place": {
+                "id": 211,
+                "name": "Lampang",
+                "type": "places",
+                "place_type": "city",
+                "images": [
+                  "http://loremflickr.com/500/500/Lampang,landmark/all"
+                ],
+                "location": {
+                  "latitude": "0.000000000000000",
+                  "longitude": "0.000000000000000"
+                },
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/cities/211/places"
+              },
+              "videos": [],
+              "activities": [
+                {
+                  "id": 7,
+                  "post_id": "99",
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=7"
+                },
+                {
+                  "id": 1,
+                  "post_id": "99",
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=1"
+                }
+              ],
+              "user": {
+                "id": 18,
+                "name": "Roel65@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/user/18"
+              }
+            }
+          ],
+          "meta": {
+            "previous": "http://pnpd.uat.maqe.com/api/v1/feeds?id_lt=99",
+            "next": "http://pnpd.uat.maqe.com/api/v1/feeds?id_gt=99"
+          }
+        }
+        
+### Activity's feed [/place/{activity_id}/posts]
++ Parameters 
+    + activity_id (number, optional,  `1`) ... Activity id.
+
+#### Retrieves list of activity's posts [GET]
++ Request Get user's posts (application/json)
++ Response 200 (application/json)
+
+        {
+          "data": [
+            {
+              "id": 99,
+              "place_id": 211,
+              "foursquare_venue_id": null,
+              "message": "Et porro eligendi est voluptates sed et aut.",
+              "number_paiduays": "0",
+              "number_comments": "0",
+              "latitude": "-33.961605000000000",
+              "longitude": "31.936179000000000",
+              "elevation": "8205253.0000000000000",
+              "created_at": 277044320,
+              "updated_at": 1102712901,
+              "highlight_paiduay": "0",
+              "photos": [
+                {
+                  "id": 94,
+                  "created_at": "2013-12-05 21:25:45",
+                  "updated_at": "1996-01-24 13:32:38",
+                  "url": "http://loremflickr.com/500/500/Lampang,landmark/all"
+                }
+              ],
+              "place": {
+                "id": 211,
+                "name": "Lampang",
+                "type": "places",
+                "place_type": "city",
+                "images": [
+                  "http://loremflickr.com/500/500/Lampang,landmark/all"
+                ],
+                "location": {
+                  "latitude": "0.000000000000000",
+                  "longitude": "0.000000000000000"
+                },
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/cities/211/places"
+              },
+              "videos": [],
+              "activities": [
+                {
+                  "id": 7,
+                  "post_id": "99",
+                  "type": "activities",
+                  "name": "Pai nature",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=7"
+                },
+                {
+                  "id": 1,
+                  "post_id": "99",
+                  "type": "activities",
+                  "name": "Pai eat",
+                  "images": [],
+                  "endpoint": "http://pnpd.uat.maqe.com/api/v1/activities?id=1"
+                }
+              ],
+              "user": {
+                "id": 18,
+                "name": "Roel65@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.uat.maqe.com/api/v1/user/18"
+              }
+            }
+          ],
+          "meta": {
+            "previous": "http://pnpd.uat.maqe.com/api/v1/feeds?id_lt=99",
+            "next": "http://pnpd.uat.maqe.com/api/v1/feeds?id_gt=99"
+          }
+        }
