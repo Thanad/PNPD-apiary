@@ -2427,9 +2427,28 @@ http://docs.pnpdauthen.apiary.io
         
 ### Group Paiduay
 
-#### Paiduay on a post [POST /posts/{post_id}/paiduay]
+#### Paiduay with a post [/posts/{post_id}/paiduay]
 
 - PNPD-27 Like content [Feed]
+
+##### Paiduay on a post [POST]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
+    
+
++ Request Add me in paiduay post (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+        
+
++ Response 200
+
+    [Paiduay][]
+    
+##### Retrives Paiduay on a post [GET]
 
 + Parameters 
     + post_id (number, optional,  `1`) ... post id.
@@ -2449,6 +2468,9 @@ http://docs.pnpdauthen.apiary.io
 
 #### Paiduay [/paiduay/{paiduay_id}]
 
++ Parameters 
+    + paiduay_id (number, optional,  `1`) ... paiduay id.
+    
 + Model (application/json)
 
         {
@@ -2468,6 +2490,76 @@ http://docs.pnpdauthen.apiary.io
     [Paiduay][]
 
 #### Cancel paiduay [DELETE]
+
++ Request follow a activity with success (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
++ Response 200 (application/json)
+
+### Group Comments
+
+#### Comment on a post [POST /posts/{post_id}/comments]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
+    
+
++ Request Add me in paiduay post (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+        
+
++ Response 200
+
+    [Comment][]
+    
+#### Comment reply on to comment [POST /comments/{comment_id}/comments]
+
++ Parameters 
+    + comment_id (number, optional,  `1`) ... comment id.
+    
+
++ Request Add me in paiduay post (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+        
+
++ Response 200
+
+    [Comment][]
+
+
+#### Comment [/comments/{comment_id}]
+
++ Parameters 
+    + comment_id (number, optional,  `1`) ... comment id.
+    
++ Model (application/json)
+
+        {
+            "id": 1
+        }
+
+#### Retrieves Comment from id [GET]
+
++ Request follow a activity with success (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+
+    [Comment][]
+
+#### Delete Comment [DELETE]
 
 + Request follow a activity with success (application/json)
 
