@@ -31,6 +31,13 @@ HOST: http://pnpd.qa.maqe.com/api/v1
 - PNPD-35,Assign location for share photo
 - PNPD-36,Post content with comment, activity and location
 
+### Sprint 4
+
+- PNPD-27 Like content [Feed]
+- PNPD-21 Show list filter with select places and activities from APIs [Feed]
+- PNPD-43 Add category/activities** [Content Sharing]
+
+
 ## HTTP Status Code Summary
 
 - 200 OK - Everything worked as expected.
@@ -1272,6 +1279,7 @@ http://docs.pnpdauthen.apiary.io
 
 - PNPD-35 Assign location for share photo [Content Sharing]
 - PNPD-36 Post content with comment activity and location [Content Sharing]
+- PNPD-43 Add category/activities** [Content Sharing]
 
 + Request Add post with photo (application/json)
 
@@ -2197,6 +2205,8 @@ http://docs.pnpdauthen.apiary.io
 
 ### Place feed [/places/{place_id}/posts]
 
+- PNPD-21 Show list filter with select places and activities from APIs [Feed]
+
 + Parameters 
     + place_id (number, optional,  `1`) ... place id.
 
@@ -2275,6 +2285,9 @@ http://docs.pnpdauthen.apiary.io
         }
         
 ### Activity's feed [/activities/{activity_id}/posts]
+
+- PNPD-21 Show list filter with select places and activities from APIs [Feed]
+
 + Parameters 
     + activity_id (number, optional,  `1`) ... Activity id.
 
@@ -2351,3 +2364,57 @@ http://docs.pnpdauthen.apiary.io
             "next": "http://pnpd.qa.maqe.com/api/v1/feeds?id_gt=99"
           }
         }
+        
+        
+        
+### Group Paiduay
+
+#### Paiduay on a post [POST /posts/{post_id}/paiduay]
+
+- PNPD-27 Like content [Feed]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
+    
+
++ Request Add me in paiduay post (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+        
+
++ Response 200
+
+    [Paiduay][]
+
+
+#### Paiduay [/paiduay/{paiduay_id}]
+
++ Model (application/json)
+
+        {
+            "id": 1
+        }
+
+#### Retrieves paiduay from id [GET]
+
++ Request follow a activity with success (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+
+    [Paiduay][]
+
+#### Cancel paiduay [DELETE]
+
++ Request follow a activity with success (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
++ Response 200 (application/json)
