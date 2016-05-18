@@ -2430,9 +2430,169 @@ http://docs.pnpdauthen.apiary.io
         
 ### Group Paiduay
 
-#### Paiduay with a post [/posts/{post_id}/paiduay]
+#### Paiduay with post [/posts/{post_id}/paiduay]
 
 - PNPD-27 Like content [Feed]
+
++ Model (application/json)
+
+        {
+          "data": [
+            {
+              "id": 1005,
+              "post_id": 1,
+              "user_id": 1,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/1005",
+              "user": {
+                "data": {
+                  "id": 1,
+                  "name": "Test@gmail.com",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/1"
+                }
+              }
+            },
+            {
+              "id": 964,
+              "post_id": 1,
+              "user_id": 27,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/964",
+              "user": {
+                "data": {
+                  "id": 27,
+                  "name": "FMarks@example.org",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/27"
+                }
+              }
+            },
+            {
+              "id": 927,
+              "post_id": 1,
+              "user_id": 15,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/927",
+              "user": {
+                "data": {
+                  "id": 15,
+                  "name": "Kuvalis.Arthur@example.org",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/15"
+                }
+              }
+            },
+            {
+              "id": 871,
+              "post_id": 1,
+              "user_id": 23,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/871",
+              "user": {
+                "data": {
+                  "id": 23,
+                  "name": "Milo.Okuneva@example.com",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/23"
+                }
+              }
+            },
+            {
+              "id": 844,
+              "post_id": 1,
+              "user_id": 32,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/844",
+              "user": {
+                "data": {
+                  "id": 32,
+                  "name": "CVon@example.net",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/32"
+                }
+              }
+            },
+            {
+              "id": 580,
+              "post_id": 1,
+              "user_id": 23,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/580",
+              "user": {
+                "data": {
+                  "id": 23,
+                  "name": "Milo.Okuneva@example.com",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/23"
+                }
+              }
+            },
+            {
+              "id": 573,
+              "post_id": 1,
+              "user_id": 39,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/573",
+              "user": {
+                "data": {
+                  "id": 39,
+                  "name": "Jay.Jakubowski@example.net",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/39"
+                }
+              }
+            },
+            {
+              "id": 555,
+              "post_id": 1,
+              "user_id": 36,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/555",
+              "user": {
+                "data": {
+                  "id": 36,
+                  "name": "Lea.Brakus@example.com",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/36"
+                }
+              }
+            },
+            {
+              "id": 493,
+              "post_id": 1,
+              "user_id": 19,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/493",
+              "user": {
+                "data": {
+                  "id": 19,
+                  "name": "Seth16@example.net",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/19"
+                }
+              }
+            },
+            {
+              "id": 401,
+              "post_id": 1,
+              "user_id": 39,
+              "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/401",
+              "user": {
+                "data": {
+                  "id": 39,
+                  "name": "Jay.Jakubowski@example.net",
+                  "type": "users",
+                  "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/39"
+                }
+              }
+            }
+          ],
+          "meta": {
+            "pagination": {
+              "total": 13,
+              "count": 10,
+              "per_page": 10,
+              "current_page": 1,
+              "total_pages": 2,
+              "links": {
+                "next": "http://pnpd.qa.maqe.com/api/v1/posts/1/paiduay?page=2"
+              }
+            }
+          }
+        }
+
 
 ##### Retrives Paiduay on a post [GET]
 
@@ -2449,7 +2609,8 @@ http://docs.pnpdauthen.apiary.io
 
 + Response 200
 
-    [Paiduay][]
+    [Paiduay with post][]
+
     
     
 ##### Make Paiduay on a post [POST]
@@ -2467,10 +2628,25 @@ http://docs.pnpdauthen.apiary.io
 
 + Response 200
 
-    [Paiduay][]
+    [Paiduay with post][]
+
+    
+##### Remove my Paiduay from post [DELETE]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
     
 
++ Request Add me in paiduay post (application/json)
 
+    + Headers
+            
+            Authorization: Bearer {access_token}
+        
+
++ Response 200
+
+    [Paiduay with post][]
 
 #### Paiduay [/paiduay/{paiduay_id}]
 
@@ -2480,12 +2656,25 @@ http://docs.pnpdauthen.apiary.io
 + Model (application/json)
 
         {
-            "id": 1
+          "data": {
+            "id": 1,
+            "post_id": 33,
+            "user_id": 17,
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/paiduay/1",
+            "user": {
+              "data": {
+                "id": 17,
+                "name": "Murray.Jerad@example.org",
+                "type": "users",
+                "endpoint": "http://pnpd.qa.maqe.com/api/v1/user/17"
+              }
+            }
+          }
         }
 
 #### Retrieves paiduay from id [GET]
 
-+ Request follow a activity with success (application/json)
++ Request (application/json)
 
     + Headers
             
@@ -2495,15 +2684,17 @@ http://docs.pnpdauthen.apiary.io
 
     [Paiduay][]
 
+
 #### Cancel paiduay [DELETE]
 
-+ Request follow a activity with success (application/json)
++ Request (application/json)
 
     + Headers
             
             Authorization: Bearer {access_token}
             
 + Response 200 (application/json)
+
 
 ### Group Comments
 
@@ -2530,7 +2721,7 @@ http://docs.pnpdauthen.apiary.io
     + comment_id (number, optional,  `1`) ... comment id.
     
 
-+ Request Add me in paiduay post (application/json)
++ Request (application/json)
 
     + Headers
             
@@ -2555,7 +2746,7 @@ http://docs.pnpdauthen.apiary.io
 
 #### Retrieves Comment from id [GET]
 
-+ Request follow a activity with success (application/json)
++ Request (application/json)
 
     + Headers
             
@@ -2567,10 +2758,98 @@ http://docs.pnpdauthen.apiary.io
 
 #### Delete Comment [DELETE]
 
-+ Request follow a activity with success (application/json)
++ Request (application/json)
 
     + Headers
             
             Authorization: Bearer {access_token}
             
 + Response 200 (application/json)
+
+
+### Group Saved Posts
+
+#### My Saved posts [/me/saved_posts]
+
+    
++ Model (application/json)
+
+        {
+            "id": 1
+        }
+
+#### Retrieves My Saved Posts[GET]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+
+    [My Saved posts][]
+    
+#### Add to My Saved Posts[POST]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
+    + Body 
+    
+            {
+                "post_id":[
+                    1,2,3
+                ]
+            }
+            
++ Response 200
+
+    [My Saved posts][]
+    
+#### Delete from My Saved Posts [DELETE]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body 
+    
+            {
+                "post_id":[
+                    1,2,3
+                ]
+            }
+
++ Response 200
+
+    [My Saved posts][]
+    
+
+#### User's Saved posts [/users/{user_id}/saved_posts]
+
++ Parameters 
+    + user_id (number, optional,  `1`) ... user id.
+    
++ Model (application/json)
+
+        {
+            "id": 1
+        }
+
+#### Retrieves User's Saved Posts[GET]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+    
+    [User's Saved posts][]
