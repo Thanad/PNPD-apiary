@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://pnpd.qa.maqe.com/api/v1
+HOST: http://qa.painai-paiduay.com/api/v1
 
 # PNPD API
 
@@ -488,7 +488,141 @@ http://docs.pnpdauthen.apiary.io
 
 #### List all activities [GET /activities]
 
-+ Request (application/json)
++ Request old Response (application/json)
++ Response 200 (application/json)
+
+        [
+          {
+            "id": 1,
+            "type": "activities",
+            "name": "Pai eat",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/food/all"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/food/all"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=1"
+          },
+          {
+            "id": 2,
+            "type": "activities",
+            "name": "Pai drink",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/drink,beverage"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/drink,beverage"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=2"
+          },
+          {
+            "id": 3,
+            "type": "activities",
+            "name": "Pai shop",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/shopping"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/shopping"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=3"
+          },
+          {
+            "id": 4,
+            "type": "activities",
+            "name": "Pai sleep",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/hotel,room/all"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/hotel,room/all"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=4"
+          },
+          {
+            "id": 5,
+            "type": "activities",
+            "name": "Pai check-in",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/landmark"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/landmark"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=5"
+          },
+          {
+            "id": 6,
+            "type": "activities",
+            "name": "Pai adventure",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/adventure"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/adventure"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=6"
+          },
+          {
+            "id": 7,
+            "type": "activities",
+            "name": "Pai nature",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/nature"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/nature"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=7"
+          },
+          {
+            "id": 8,
+            "type": "activities",
+            "name": "Pai sport",
+            "images": [
+              "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/sport"
+            ],
+            "photos": [
+              {
+                "height": 0,
+                "width": 0,
+                "url": "http://loremflickr-ff79be16.d27622ac.svc.dockerapp.io/500/500/sport"
+              }
+            ],
+            "endpoint": "http://pnpd.qa.maqe.com/api/v1/activities?id=8"
+          }
+        ]
+
++ Request New Response (application/json)
 + Response 200 (application/json)
 
         {
@@ -623,7 +757,6 @@ http://docs.pnpdauthen.apiary.io
             }
           ]
         }
-
 
 ### Group Places
 
