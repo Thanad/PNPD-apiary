@@ -350,6 +350,9 @@ http://docs.pnpdauthen.apiary.io
           }
         }
         
+        
+## Group Following
+
 ### Follow [/follows{?type}]
 
 + Parameters
@@ -481,6 +484,45 @@ http://docs.pnpdauthen.apiary.io
 
         {
             "messages":"Success"
+        }
+
+## Group Friends
+
+Friends are people that follow each together,
+Use /me/friends for lists current user login friends
+
+### Current login user friends [/me/friends]
+
+#### Get all friends list [GET]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
+            
++ Response 200 (application/json)
+
+        {
+           
+        }
+        
+### User's Friends [/users/{user_id}/friends]
+
+#### Get all friends list [GET]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
+            
++ Response 200 (application/json)
+
+        {
+           
         }
 
 
