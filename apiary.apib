@@ -356,7 +356,7 @@ http://docs.pnpdauthen.apiary.io
 ### Follow [/follows{?type}]
 
 + Parameters
-    + type (optional, activities|places|users) ... Type of object to retrieve ["Activity","Place","User"]
+    + type (optional, activities|places|users) ... Type of object to retrieve ["activities","places","users"]
 
 #### Get all follow list [GET]
 
@@ -439,7 +439,16 @@ http://docs.pnpdauthen.apiary.io
             
     + Body
     
-            [{"type":"activities","id":1}]
+            [
+              {
+                "type": "activities",
+                "id": 1
+              },
+              {
+                "type": "activities",
+                "id": 2
+              }
+            ]
         
 + Response 200 (application/json)
 
@@ -2888,7 +2897,13 @@ Use /me/friends for lists current user login friends
     + Body
     
             {
-                "message":"Hi this is comment reply on post"
+              "data": {
+                "id": 3467,
+                "owner_id": 1,
+                "message": "testblabla",
+                "created_at": 1464082044,
+                "updated_at": 1464082044
+              }
             }
         
 
