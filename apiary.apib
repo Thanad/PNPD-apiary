@@ -1551,11 +1551,13 @@ http://docs.pnpdauthen.apiary.io
 |photos| Array of photos that will attach to this post normaly is just one |
 |videos| Array of videos that will attach to this post |
 
-#### New post [POST /posts]
+#### New or Edit post [/posts]
 
 - PNPD-35 Assign location for share photo [Content Sharing]
 - PNPD-36 Post content with comment activity and location [Content Sharing]
 - PNPD-43 Add category/activities** [Content Sharing]
+
+##### Create new post [POST]
 
 + Request Add post with photo (application/json)
 
@@ -1651,7 +1653,31 @@ http://docs.pnpdauthen.apiary.io
             ]
           }
         }
+        
 
+##### Edit post [PUT]
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            {
+                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+                "latitude": 0,
+                "longitude": 0,
+                "elevation": null,
+                "activities": [1,2,3],
+                "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+            }
+
++ Response 200
+    
+    [Post][]
+    
 #### Post [/posts/{post_id}]
 
 + Parameters 
