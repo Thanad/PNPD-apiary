@@ -846,6 +846,36 @@ http://docs.pnpdauthen.apiary.io
           ]
         }
         
+        
++ Request with specific place type (application/json)
+
+        {
+            "name": "finland",
+            "type": "country"
+        }
+        
++ Response 200 (application/json)
+
+        {
+          "data": [
+            {
+              "id": 22,
+              "name": "Finland",
+              "heading_2": "Europe",
+              "type": "places",
+              "place_type": "country",
+              "images": [
+                "http://haproxy-cfd96541.d1e9486f.svc.dockerapp.io/500/500/Finland,landmark/all"
+              ],
+              "location": {
+                "latitude": "0.000000000000000",
+                "longitude": "0.000000000000000"
+              },
+              "endpoint": "http://qa.painai-paiduay.com/api/v1/countries/22/states"
+            }
+          ]
+        }
+        
 #### Display countries by the continent [GET /continents/{continent}/countries]
 
 + Parameters 
@@ -3029,6 +3059,41 @@ http://docs.pnpdauthen.apiary.io
             
 + Response 200 (application/json)
 
+### Group Report
+
+#### Report post [POST /posts/{post_id}/reports]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
+    + type (number, optional,  `2`) ... type id [1,2,3].
+    + message (string, optional, `testblabla`) ... reasons for reporting.
+    
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body 
+
+            {
+                "type": 2,
+                "message": "testblabla"
+            }
+
++ Response 200
+
+            {
+              "data": {
+                "type": "1",
+                "message": "testblabla",
+                "post_id": "1",
+                "from_user_id": 1,
+                "updated_at": 1465365832,
+                "created_at": 1465365832,
+                "id": 121
+              }
+            }
 
 ### Group Saved Posts
 
