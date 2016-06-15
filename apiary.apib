@@ -1687,28 +1687,6 @@ http://docs.pnpdauthen.apiary.io
         }
         
 
-##### Edit post [PUT]
-
-+ Request (application/json)
-
-    + Headers
-            
-            Authorization: Bearer {access_token}
-            
-    + Body
-    
-            {
-                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
-                "activities": [1,2,3],
-                "latitude": 0,
-                "longitude": 0,
-                "elevation": null,
-                "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
-            }
-
-+ Response 200
-    
-    [Post][]
     
 #### Post [/posts/{post_id}]
 
@@ -1772,7 +1750,29 @@ http://docs.pnpdauthen.apiary.io
     
     [Post][]
 
+##### Edit post [PUT]
 
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            {
+                "message":"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+                "activities": [1,2,3],
+                "latitude": 0,
+                "longitude": 0,
+                "elevation": null,
+                "foursquare_venue_id": "4eeec3029911d70cb94c9e82",
+            }
+
++ Response 200
+    
+    [Post][]
+    
 #### Delete post [DELETE]
 + Request follow a activity with success (application/json)
 
