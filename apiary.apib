@@ -815,14 +815,11 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Places
 
-#### Search place with given name [POST /places/search]
+#### Search place with given name [GET /places/search{?name}]
 
-+ Request (application/json)
-
-        {
-            "name": "finland"
-        
-        }
++ Parameters 
+    + name (string, optional,  `finland`) ... place name.
+    
         
 + Response 200 (application/json)
 
