@@ -1566,6 +1566,32 @@ http://docs.pnpdauthen.apiary.io
           }
         }
         
+#### Retrive place info from id [GET /places/{place_id}]
+
++ Parameters 
+    + place_id:169
+    
++ Request (application/json)
++ Response 200 (application/json)
+
+        {
+          "data": {
+            "id": 169,
+            "name": "Thailand",
+            "heading_2": "Asia",
+            "type": "places",
+            "place_type": "country",
+            "images": [
+              "http://loremflickr.com/500/500/Thailand,landmark/all"
+            ],
+            "location": {
+              "latitude": 0,
+              "longitude": 0
+            },
+            "endpoint": "http://pnpd.dev/api/v1/countries/169/states"
+          }
+        }
+
 
 ### Group Posting
 
