@@ -186,10 +186,12 @@ http://docs.pnpdauthen.apiary.io
             "errors":"That email address is not valid. Please check it and try again"
         }
 
-## Group User Info
+## Group Users
 
+
+        
 #### Current user [GET /me]
-            
+
 + Request (application/json)
 
     + Headers
@@ -201,8 +203,12 @@ http://docs.pnpdauthen.apiary.io
 
         {
           "data": {
-            "id": 52,
-            "email": "thanad@gmail.com"
+            "id": 23,
+            "name": "Thanad Pansing",
+            "type": "users",
+            "is_followed": false,
+            "endpoint": "http://pnpd.dev/api/v1/user/23",
+            "photos": null
           }
         }
         
@@ -213,6 +219,331 @@ http://docs.pnpdauthen.apiary.io
           "message": "Failed to authenticate because of bad credentials or an invalid authorization header.",
           "status_code": 401
         }
+
+#### Users information [GET /users/{user_id}]
+        
++ Request (application/json)
+
+    + Headers
+    
+            Authorization: Bearer {access_token}
+            
+
++ Response 200 (application/json)
+
+        {
+          "data": {
+            "id": 23,
+            "name": "Thanad Pansing",
+            "type": "users",
+            "is_followed": false,
+            "endpoint": "http://pnpd.dev/api/v1/user/23",
+            "photos": null
+          }
+        }
+
+#### Search users to follow [GET /users/{user_id}/search]
+
++ Request (application/json)
+
+    + Headers
+    
+            Authorization: Bearer {access_token}
+            
+
++ Response 200 (application/json)
+
+        {
+          "data": [
+            {
+              "id": 13,
+              "name": "Furman.Sporer1465990128@mailinator.com",
+              "type": "users",
+              "is_followed": false,
+              "endpoint": "http://pnpd.dev/api/v1/user/13",
+              "photos": null,
+              "posts": {
+                "data": [
+                  {
+                    "id": 14,
+                    "place_id": 127,
+                    "foursquare_venue_id": null,
+                    "message": "Atque numquam dignissimos explicabo deleniti iste occaecati et.",
+                    "number_paiduays": 7,
+                    "number_comments": 0,
+                    "highlight_paiduay": false,
+                    "latitude": 88.437936,
+                    "longitude": -27.961617,
+                    "elevation": 58,
+                    "is_paiduay": false,
+                    "photos": [],
+                    "videos": [
+                      {
+                        "id": 3,
+                        "height": 500,
+                        "width": 500,
+                        "created_at": 677168209,
+                        "updated_at": 874295204,
+                        "deleted_at": null,
+                        "url": "http://www.sample-videos.com/video/mp4/360/big_buck_bunny_360p_1mb.mp4"
+                      }
+                    ],
+                    "created_at": 1090856651,
+                    "updated_at": 1465990132,
+                    "user": {
+                      "data": {
+                        "id": 13,
+                        "name": "Furman.Sporer1465990128@mailinator.com",
+                        "type": "users",
+                        "is_followed": false,
+                        "endpoint": "http://pnpd.dev/api/v1/user/13",
+                        "photos": null
+                      }
+                    },
+                    "place": {
+                      "data": {
+                        "id": 127,
+                        "name": "Saint Kitts and Nevis",
+                        "heading_2": "North america",
+                        "type": "places",
+                        "place_type": "country",
+                        "images": [
+                          "http://loremflickr.com/500/500/Saint%20Kitts%20and%20Nevis,landmark/all"
+                        ],
+                        "location": {
+                          "latitude": 0,
+                          "longitude": 0
+                        },
+                        "endpoint": "http://pnpd.dev/api/v1/countries/127/states"
+                      }
+                    },
+                    "activities": {
+                      "data": [
+                        {
+                          "id": 1,
+                          "type": "activities",
+                          "name": "Pai eat",
+                          "images": [
+                            "http://loremflickr.com/500/500/food/all"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/food/all"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=1"
+                        },
+                        {
+                          "id": 6,
+                          "type": "activities",
+                          "name": "Pai adventure",
+                          "images": [
+                            "http://loremflickr.com/500/500/adventure"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/adventure"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=6"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": 11,
+                    "place_id": 102,
+                    "foursquare_venue_id": null,
+                    "message": "Voluptatem fugiat eos voluptas voluptas quia corporis sit.",
+                    "number_paiduays": 5,
+                    "number_comments": 0,
+                    "highlight_paiduay": false,
+                    "latitude": -73.860251,
+                    "longitude": -145.141777,
+                    "elevation": 6,
+                    "is_paiduay": true,
+                    "photos": [
+                      {
+                        "height": 500,
+                        "width": 500,
+                        "url": "http://loremflickr.com/500/500/Swaziland,landmark/all"
+                      }
+                    ],
+                    "videos": [],
+                    "created_at": 86483771,
+                    "updated_at": 1465990132,
+                    "user": {
+                      "data": {
+                        "id": 13,
+                        "name": "Furman.Sporer1465990128@mailinator.com",
+                        "type": "users",
+                        "is_followed": false,
+                        "endpoint": "http://pnpd.dev/api/v1/user/13",
+                        "photos": null
+                      }
+                    },
+                    "place": {
+                      "data": {
+                        "id": 102,
+                        "name": "Swaziland",
+                        "heading_2": "Africa",
+                        "type": "places",
+                        "place_type": "country",
+                        "images": [
+                          "http://loremflickr.com/500/500/Swaziland,landmark/all"
+                        ],
+                        "location": {
+                          "latitude": 0,
+                          "longitude": 0
+                        },
+                        "endpoint": "http://pnpd.dev/api/v1/countries/102/states"
+                      }
+                    },
+                    "activities": {
+                      "data": [
+                        {
+                          "id": 3,
+                          "type": "activities",
+                          "name": "Pai shop",
+                          "images": [
+                            "http://loremflickr.com/500/500/shopping"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/shopping"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=3"
+                        },
+                        {
+                          "id": 4,
+                          "type": "activities",
+                          "name": "Pai sleep",
+                          "images": [
+                            "http://loremflickr.com/500/500/hotel,room/all"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/hotel,room/all"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=4"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": 12,
+                    "place_id": 101,
+                    "foursquare_venue_id": null,
+                    "message": "Debitis accusamus dolorem sit dolorum ab.",
+                    "number_paiduays": 6,
+                    "number_comments": 0,
+                    "highlight_paiduay": false,
+                    "latitude": -58.149418,
+                    "longitude": 64.788321,
+                    "elevation": 68,
+                    "is_paiduay": false,
+                    "photos": [
+                      {
+                        "height": 500,
+                        "width": 500,
+                        "url": "http://loremflickr.com/500/500/Sudan,landmark/all"
+                      }
+                    ],
+                    "videos": [],
+                    "created_at": 3252179,
+                    "updated_at": 1465990132,
+                    "user": {
+                      "data": {
+                        "id": 13,
+                        "name": "Furman.Sporer1465990128@mailinator.com",
+                        "type": "users",
+                        "is_followed": false,
+                        "endpoint": "http://pnpd.dev/api/v1/user/13",
+                        "photos": null
+                      }
+                    },
+                    "place": {
+                      "data": {
+                        "id": 101,
+                        "name": "Sudan",
+                        "heading_2": "Africa",
+                        "type": "places",
+                        "place_type": "country",
+                        "images": [
+                          "http://loremflickr.com/500/500/Sudan,landmark/all"
+                        ],
+                        "location": {
+                          "latitude": 0,
+                          "longitude": 0
+                        },
+                        "endpoint": "http://pnpd.dev/api/v1/countries/101/states"
+                      }
+                    },
+                    "activities": {
+                      "data": [
+                        {
+                          "id": 2,
+                          "type": "activities",
+                          "name": "Pai drink",
+                          "images": [
+                            "http://loremflickr.com/500/500/drink,beverage"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/drink,beverage"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=2"
+                        },
+                        {
+                          "id": 3,
+                          "type": "activities",
+                          "name": "Pai shop",
+                          "images": [
+                            "http://loremflickr.com/500/500/shopping"
+                          ],
+                          "photos": [
+                            {
+                              "height": 0,
+                              "width": 0,
+                              "url": "http://loremflickr.com/500/500/shopping"
+                            }
+                          ],
+                          "endpoint": "http://pnpd.dev/api/v1/activities?id=3"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "meta": {
+            "pagination": {
+              "total": 20,
+              "count": 10,
+              "per_page": 10,
+              "current_page": 1,
+              "total_pages": 20,
+              "links": {
+                "next": "http://pnpd.dev/api/v1/users/search?page=2"
+              }
+            }
+          }
+        }
+
 
 ## Group Customize My Painai
 - PNPD-65, Follow activities
