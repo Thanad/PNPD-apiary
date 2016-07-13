@@ -322,6 +322,35 @@ http://docs.pnpdauthen.apiary.io
           "status_code": 401
         }
 
+#### Update profile [PUT /me/profile]
+
++ Request (application/json)
+
+    + Headers
+    
+            Authorization: Bearer {access_token}
+            
+    + Body
+
+            {
+                "data" : {
+                   "taglines" : "tertest",
+                   "photos": {
+                        "height": 200,
+                        "width": 201,
+                        "bucket": "https://s3-ap-southeast-1.amazonaws.com",
+                        "path": "/pnpd-upload/photos/B/BDS4OPjbkWn.jpeg"
+                    }
+                }
+            }
+
++ Response 200 (application/json)
+        
+        {
+            "message": "Success",
+            "status_code": 200
+        }
+
 #### Users information [GET /users/{user_id}{?include}]
         
 + Parameters 
@@ -355,7 +384,7 @@ http://docs.pnpdauthen.apiary.io
     + Headers
     
             Authorization: Bearer {access_token}
-            
+        
 
 + Response 200 (application/json)
 
