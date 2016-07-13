@@ -2989,14 +2989,41 @@ http://docs.pnpdauthen.apiary.io
           }
         }
 
-#### Get feed for home [GET]
+#### Users home feed [GET]
 
 + Request follow a activity with success (application/json)
 + Response 200
     
     [Home feed][]
 
+### Near by feed [GET /feeds/near_by{?distance,lat,lon}]
+
++ Parameters
+    + lat = `13.742760609380000` (number, optional,  `13.742760609380000`) ... Latitude
+    + lon = `100.548562072160000` (number, optional,  `100.548562072160000`) ... Longitude
+    + distance = `10km` (string, optional,  `10km`) ... Max distance between post from lat,lon.
     
++ Request (application/json)
++ Response 200
+    
+    [Home feed][]
+    
+### Popular feed [GET /feeds/popular{?since}]
+
++ Parameters
+    + since = `2016-07` (string, optional,  `2016-07`) ... Specific year-month that need to sort popular posts
+    
++ Request (application/json)
++ Response 200
+    
+    [Home feed][]
+    
+### Recent feed [GET /feeds/recent]
++ Request (application/json)
++ Response 200
+    
+    [Home feed][]
+
 ### User's posts [/users/{user_id}/posts]
 
 + Parameters 
