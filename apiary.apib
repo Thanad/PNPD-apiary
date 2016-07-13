@@ -16,9 +16,7 @@ HOST: http://uat.painai-paiduay.com/api/v1
 - 50x Server errors - something went wrong on api domain’s end.
 
 
-## Group API Authentication and User login API
-- PNPD-13,Log in with Facebook
-- PNPD-14,Log in with e-mail
+## Group API Authentication
 
 http://docs.pnpdauthen.apiary.io
 
@@ -187,7 +185,7 @@ http://docs.pnpdauthen.apiary.io
           "status_code": 401
         }
 
-#### Users information [GET /users/{user_id}]
+#### Users information [GET /users/{user_id}{?include}]
         
 + Request (application/json)
 
@@ -209,8 +207,11 @@ http://docs.pnpdauthen.apiary.io
           }
         }
 
-#### Search users to follow [GET /users/{user_id}/search]
+#### Search users to follow [GET /users/search{?name}]
 
++ Parameters 
+    + name (string, optional,  `lorem`) ... User's name.
+    
 + Request (application/json)
 
     + Headers
@@ -651,10 +652,11 @@ http://docs.pnpdauthen.apiary.io
         
 ## Group Following
 
-### Follow [/follows{?type}]
+### Follow [/follows{?type,per_page}]
 
 + Parameters
     + type (optional, activities|places|users) ... Type of object to retrieve ["activities","places","users"]
+    + per_page (optional, number or all) ... Number of reccords that need to show with single api call
 
 #### Get all follow list [GET]
 
