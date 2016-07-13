@@ -334,6 +334,8 @@ http://docs.pnpdauthen.apiary.io
 
             {
                 "data" : {
+                    "first_name": "tester",
+                    "last_name": "tertest",
                    "taglines" : "tertest",
                    "photos": {
                         "height": 200,
@@ -351,6 +353,30 @@ http://docs.pnpdauthen.apiary.io
             "status_code": 200
         }
 
++ Request change password (application/json)
+
+    + Headers
+    
+            Authorization: Bearer {access_token}
+            
+    + Body
+
+            {
+                "data" : {
+                    "password": {
+                        "current_password": "pass",
+                        "new_password": "baba"
+                    }
+                }
+            }
+
++ Response 200 (application/json)
+        
+        {
+            "message": "Success",
+            "status_code": 200
+        }
+        
 #### Users information [GET /users/{user_id}{?include}]
         
 + Parameters 
