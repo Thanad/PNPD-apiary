@@ -171,12 +171,149 @@ http://docs.pnpdauthen.apiary.io
             "id": 23,
             "name": "Thanad Pansing",
             "type": "users",
+            "auth_vendors": {
+              "facebook": "10153963827560851"
+            },
             "is_followed": false,
-            "endpoint": "http://pnpd.dev/api/v1/user/23",
-            "photos": null
+            "endpoint": "http://pnpd.dev/api/v1/users/23",
+            "photos": null,
           }
         }
         
++ Request with ?include=profile,posts (application/json)  
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
++ Response 200 (application/json)
+
+        {
+          "data": {
+            "id": 23,
+            "name": "Thanad Pansing",
+            "type": "users",
+            "auth_vendors": {
+              "facebook": "10153963827560851"
+            },
+            "is_followed": false,
+            "endpoint": "http://pnpd.dev/api/v1/users/23",
+            "photos": null,
+            "profile": {
+              "data": {
+                "user_id": 23,
+                "first_name": null,
+                "last_name": null,
+                "display_name": "Thanad Pansing",
+                "taglines": "",
+                "gender": null,
+                "date_of_birth": null,
+                "upload_hight_quality": 1,
+                "number_posts": 0,
+                "number_following": 0,
+                "number_follower": 0
+              }
+            },
+            "posts": {
+              "data": [
+                {
+                  "id": 10,
+                  "place_id": 235,
+                  "foursquare_venue_id": null,
+                  "message": "Dignissimos quia explicabo repellat corrupti qui excepturi.",
+                  "number_paiduays": 0,
+                  "number_comments": 0,
+                  "highlight_paiduay": true,
+                  "latitude": -72.935615,
+                  "longitude": -101.462445,
+                  "elevation": 871,
+                  "is_paiduay": false,
+                  "photos": [],
+                  "videos": [
+                    {
+                      "id": 5,
+                      "height": 500,
+                      "width": 500,
+                      "created_at": 780000913,
+                      "updated_at": 392267607,
+                      "deleted_at": null,
+                      "url": "http://www.sample-videos.com/video/mp4/360/big_buck_bunny_360p_1mb.mp4"
+                    }
+                  ],
+                  "created_at": 360905808,
+                  "updated_at": 851529341,
+                  "user": {
+                    "data": {
+                      "id": 23,
+                      "name": "Thanad Pansing",
+                      "type": "users",
+                      "auth_vendors": {
+                        "facebook": "10153963827560851"
+                      },
+                      "is_followed": false,
+                      "endpoint": "http://pnpd.dev/api/v1/users/23",
+                      "photos": null
+                    }
+                  },
+                  "place": {
+                    "data": {
+                      "id": 235,
+                      "name": "Changwat Ubon Ratchathani",
+                      "heading_2": "Thailand",
+                      "type": "places",
+                      "place_type": "state",
+                      "number_posts": 0,
+                      "images": [
+                        "http://loremflickr.com/500/500/Changwat%20Ubon%20Ratchathani,landmark/all"
+                      ],
+                      "location": {
+                        "latitude": 0,
+                        "longitude": 0
+                      },
+                      "endpoint": "http://pnpd.dev/api/v1/states/235/cities"
+                    }
+                  },
+                  "activities": {
+                    "data": [
+                      {
+                        "id": 8,
+                        "type": "activities",
+                        "name": "Pai sport",
+                        "images": [
+                          "http://loremflickr.com/500/500/sport"
+                        ],
+                        "photos": [
+                          {
+                            "height": 0,
+                            "width": 0,
+                            "url": "http://loremflickr.com/500/500/sport"
+                          }
+                        ],
+                        "endpoint": "http://pnpd.dev/api/v1/activities?id=8"
+                      },
+                      {
+                        "id": 7,
+                        "type": "activities",
+                        "name": "Pai nature",
+                        "images": [
+                          "http://loremflickr.com/500/500/nature"
+                        ],
+                        "photos": [
+                          {
+                            "height": 0,
+                            "width": 0,
+                            "url": "http://loremflickr.com/500/500/nature"
+                          }
+                        ],
+                        "endpoint": "http://pnpd.dev/api/v1/activities?id=7"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+
 + Request With authentication fail (application/json)
 + Response 401 (application/json)
 
@@ -187,6 +324,9 @@ http://docs.pnpdauthen.apiary.io
 
 #### Users information [GET /users/{user_id}{?include}]
         
++ Parameters 
+    + include (string, optional,  `profile,posts`) ... include profile,posts data within response.
+    
 + Request (application/json)
 
     + Headers
@@ -201,9 +341,30 @@ http://docs.pnpdauthen.apiary.io
             "id": 23,
             "name": "Thanad Pansing",
             "type": "users",
+            "auth_vendors": {
+              "facebook": "10153963827560851"
+            },
             "is_followed": false,
-            "endpoint": "http://pnpd.dev/api/v1/user/23",
-            "photos": null
+            "endpoint": "http://pnpd.dev/api/v1/users/23",
+            "photos": null,
+            "profile": {
+              "data": {
+                "user_id": 23,
+                "first_name": null,
+                "last_name": null,
+                "display_name": "Thanad Pansing",
+                "taglines": "",
+                "gender": null,
+                "date_of_birth": null,
+                "upload_hight_quality": 1,
+                "number_posts": 0,
+                "number_following": 0,
+                "number_follower": 0
+              }
+            },
+            "posts": {
+              "data": []
+            }
           }
         }
 
