@@ -1460,10 +1460,12 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Places
 
-#### Search place with given name [GET /places/search{?name}]
+#### Search place with given name [GET /places/search{?name,type,place_id}]
 
 + Parameters 
     + name (string, optional,  `finland`) ... place name.
+    + type (string, optional,  `country`) ... for spicific place type.
+    + place_id (string, optional,  `169`) ... for spicific underneath place.
     
         
 + Response 200 (application/json)
@@ -1491,10 +1493,6 @@ http://docs.pnpdauthen.apiary.io
         
 + Request with specific place type (application/json)
 
-        {
-            "name": "finland",
-            "type": "country"
-        }
         
 + Response 200 (application/json)
 
