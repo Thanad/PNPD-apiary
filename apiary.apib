@@ -4102,3 +4102,37 @@ http://docs.pnpdauthen.apiary.io
 + Response 200
     
     [User's Saved posts][]
+    
+    
+    
+### Group Notifications
+
+#### Notifications list [GET /notifications]
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+
+
+#### Register or Unregister for receives notification on mobile [/notifications/subscription]
+##### Register mobile notification [POST]
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
+    
+
+##### Unregister mobile notification [DELETE]
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
