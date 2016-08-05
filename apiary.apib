@@ -4149,18 +4149,25 @@ http://docs.pnpdauthen.apiary.io
             }
 
 
-#### Register or Unregister for receives notification on mobile [/notifications/subscription]
-##### Register mobile notification [POST]
+#### Register for receives notification on mobile [POST /notifications/subscription]
+
 + Request (application/json)
 
     + Headers
             
             Authorization: Bearer {access_token}
+            
+    + Body
+            
+            {
+                "token":"mobile-token",
+                "data":{}
+            }
 
 + Response 200
     
 
-##### Unregister mobile notification [DELETE]
+#### Unregister mobile notification [DELETE /notifications/subscription/{token}]
 + Request (application/json)
 
     + Headers
