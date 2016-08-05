@@ -4149,6 +4149,19 @@ http://docs.pnpdauthen.apiary.io
               }
             }
 
+#### Get a notification from id [GET /notifications/{id}{?include}]
+
++ Parameters 
+    + id (number, required,  `1`) ... id of notification
+    + include (string, optional, `subject`) ... avaliable to include more data (type, subject, object, action)
+
++ Request (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+
++ Response 200
 
 #### Register for receives notification on mobile [POST /notifications/subscription]
 
