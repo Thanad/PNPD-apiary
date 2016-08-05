@@ -3669,7 +3669,226 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Comments
 
-#### Comment on a post [POST /posts/{post_id}/comments]
+#### Comment on a post [/posts/{post_id}/comments{?include}]
+
+#### Retrieves comments on a post [GET]
+
++ Parameters 
+    + post_id (number, optional,  `1`) ... post id.
+    + include (string, optional,`reply_to`) ... extra data in comma separation (user,comments,reply_to)
+
+
++ Request Add me in paiduay post (application/json)
+
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            {
+              "data": [
+                {
+                  "id": 3540,
+                  "owner_id": 54,
+                  "message": "abc",
+                  "reply_to_id": 834,
+                  "reply_to_type": "App\\Models\\Post",
+                  "created_at": 1470026188,
+                  "updated_at": 1470026188,
+                  "user": {
+                    "data": {
+                      "id": 54,
+                      "name": "Atikom Tancharon",
+                      "type": "users",
+                      "auth_vendors": {
+                        "facebook": "1315219765160416"
+                      },
+                      "is_followed": false,
+                      "endpoint": "http://uat.painai-paiduay.com/api/v1/users/54",
+                      "photos": {
+                        "height": 720,
+                        "width": 1080,
+                        "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/N/NXpH0S7V0NM8.jpg"
+                      }
+                    }
+                  },
+                  "comments": {
+                    "data": [
+                      {
+                        "id": 3544,
+                        "owner_id": 54,
+                        "message": "abc",
+                        "reply_to_id": 3540,
+                        "reply_to_type": "App\\Models\\Comment",
+                        "created_at": 1470026763,
+                        "updated_at": 1470026763,
+                        "user": {
+                          "data": {
+                            "id": 54,
+                            "name": "Atikom Tancharon",
+                            "type": "users",
+                            "auth_vendors": {
+                              "facebook": "1315219765160416"
+                            },
+                            "is_followed": false,
+                            "endpoint": "http://uat.painai-paiduay.com/api/v1/users/54",
+                            "photos": {
+                              "height": 720,
+                              "width": 1080,
+                              "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/N/NXpH0S7V0NM8.jpg"
+                            }
+                          }
+                        },
+                        "comments": {
+                          "data": []
+                        }
+                      },
+                      {
+                        "id": 3545,
+                        "owner_id": 54,
+                        "message": "Hi this is comment reply on comment",
+                        "reply_to_id": 3540,
+                        "reply_to_type": "App\\Models\\Comment",
+                        "created_at": 1470026804,
+                        "updated_at": 1470026804,
+                        "user": {
+                          "data": {
+                            "id": 54,
+                            "name": "Atikom Tancharon",
+                            "type": "users",
+                            "auth_vendors": {
+                              "facebook": "1315219765160416"
+                            },
+                            "is_followed": false,
+                            "endpoint": "http://uat.painai-paiduay.com/api/v1/users/54",
+                            "photos": {
+                              "height": 720,
+                              "width": 1080,
+                              "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/N/NXpH0S7V0NM8.jpg"
+                            }
+                          }
+                        },
+                        "comments": {
+                          "data": []
+                        }
+                      },
+                      {
+                        "id": 3547,
+                        "owner_id": 54,
+                        "message": "Hi this is comment reply on comment",
+                        "reply_to_id": 3540,
+                        "reply_to_type": "App\\Models\\Comment",
+                        "created_at": 1470026955,
+                        "updated_at": 1470026955,
+                        "user": {
+                          "data": {
+                            "id": 54,
+                            "name": "Atikom Tancharon",
+                            "type": "users",
+                            "auth_vendors": {
+                              "facebook": "1315219765160416"
+                            },
+                            "is_followed": false,
+                            "endpoint": "http://uat.painai-paiduay.com/api/v1/users/54",
+                            "photos": {
+                              "height": 720,
+                              "width": 1080,
+                              "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/N/NXpH0S7V0NM8.jpg"
+                            }
+                          }
+                        },
+                        "comments": {
+                          "data": []
+                        }
+                      }
+                    ]
+                  },
+                  "reply_to": {
+                    "data": {
+                      "id": 834,
+                      "place_id": 355,
+                      "foursquare_venue_id": "54addec5498e0da4bfe14445",
+                      "message": "",
+                      "number_paiduays": 0,
+                      "number_comments": 7,
+                      "highlight_paiduay": false,
+                      "latitude": 13.76696676701,
+                      "longitude": 100.56893348694,
+                      "elevation": null,
+                      "is_paiduay": false,
+                      "photos": [
+                        {
+                          "height": 1080,
+                          "width": 808,
+                          "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/k/keAHYSnr1Q2r.jpg"
+                        }
+                      ],
+                      "videos": [],
+                      "created_at": 1470024906,
+                      "updated_at": 1470230652,
+                      "user": {
+                        "data": {
+                          "id": 54,
+                          "name": "Atikom Tancharon",
+                          "type": "users",
+                          "auth_vendors": {
+                            "facebook": "1315219765160416"
+                          },
+                          "is_followed": false,
+                          "endpoint": "http://uat.painai-paiduay.com/api/v1/users/54",
+                          "photos": {
+                            "height": 720,
+                            "width": 1080,
+                            "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/N/NXpH0S7V0NM8.jpg"
+                          }
+                        }
+                      },
+                      "place": {
+                        "data": {
+                          "id": 355,
+                          "name": "Train Night Market Ratchada (ตลาดนัดรถไฟ รัชดา)",
+                          "heading_2": "Thailand",
+                          "type": "places",
+                          "place_type": "place",
+                          "number_posts": "3",
+                          "images": [
+                            "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/9/9ZUmSv98Oeb.jpeg"
+                          ],
+                          "location": {
+                            "latitude": "13.767022180629000",
+                            "longitude": "100.568933486940000"
+                          },
+                          "endpoint": "/api/v1/places/355"
+                        }
+                      },
+                      "activities": {
+                        "data": []
+                      }
+                    }
+                  }
+                }
+              ],
+              "meta": {
+                "pagination": {
+                  "total": 7,
+                  "count": 1,
+                  "per_page": 1,
+                  "current_page": 1,
+                  "total_pages": 7,
+                  "links": {
+                    "next": "http://uat.painai-paiduay.com/api/v1/posts/834/comments?sort=asc&per_page=1&page=2"
+                  }
+                }
+              }
+            }
+        
+
++ Response 200
+
+    [Comment][]
+
+#### Post a comment on a post [POST]
 
 + Parameters 
     + post_id (number, optional,  `1`) ... post id.
@@ -3702,7 +3921,6 @@ http://docs.pnpdauthen.apiary.io
 
 + Parameters 
     + comment_id (number, optional,  `1`) ... comment id.
-    
 
 + Request (application/json)
 
@@ -3730,7 +3948,14 @@ http://docs.pnpdauthen.apiary.io
 + Model (application/json)
 
         {
-            "id": 1
+          "data": {
+            "id": 3543,
+            "owner_id": 1,
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "reply_to_id": 3542,
+            "created_at": 1470026408,
+            "updated_at": 1470026408
+          }
         }
 
 #### Retrieves Comment from id [GET]
