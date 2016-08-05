@@ -4106,10 +4106,11 @@ http://docs.pnpdauthen.apiary.io
 
 ### Group Notifications
 
-#### Notifications list [GET /notifications{?read}]
+#### Notifications list [GET /notifications{?read,include}]
 
 + Parameters 
     + read (string, optional,  `true`) ... also mark all notification to read
+    + include (string, optional, `subject`) ... avaliable to include more data (type, subject, object, action)
 
 + Request (application/json)
 
