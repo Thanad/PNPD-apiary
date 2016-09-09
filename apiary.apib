@@ -1140,6 +1140,54 @@ http://docs.pnpdauthen.apiary.io
             "messages":"Success"
         }
 
+
+## Group Blocking
+
+### Blocks [/blocks{?per_page}]
+
++ Parameters
+    + per_page (optional, number or all) ... Number of reccords that need to show with single api call
+
+#### Get all blocklist [GET]
+
++ Request (application/json)
+    
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
++ Response 200 (application/json)
+
+#### Add users to blocklist [POST]
+
++ Request (application/json)
+    
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+    
+            [{"type":"users","id":1}]
+            
+            
++ Response 204 (application/json)
+
+#### Remove from blocklist [DELETE]
+
++ Request (application/json)
+    
+    + Headers
+            
+            Authorization: Bearer {access_token}
+            
+    + Body
+            
+            [{"type":"users","id":1}]
+            
++ Response 204 (application/json)
+
+
 ## Group Friends
 
 ### User's following [/users/{user_id}/following]
