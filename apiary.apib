@@ -1158,19 +1158,69 @@ http://docs.pnpdauthen.apiary.io
             
 + Response 200 (application/json)
         
-        {
-           "data":[],
-           "meta": {
-            "pagination": {
-              "total": 0,
-              "count": 0,
-              "per_page": 8,
-              "current_page": 1,
-              "total_pages": 1,
-              "links": []
+            {
+              "data": [
+                {
+                  "id": 2,
+                  "user_id": 1,
+                  "blocked": {
+                    "data": {
+                      "id": 3,
+                      "name": "kihn.dayton1468497322.9557@mailinator.com",
+                      "type": "users",
+                      "auth_vendors": null,
+                      "is_followed": false,
+                      "endpoint": "http://pnpd.dev/api/v1/users/3",
+                      "photos": {
+                        "height": 960,
+                        "width": 640,
+                        "url": "https://s3-ap-southeast-1.amazonaws.com/pnpd-upload/photos/9/9ZUmSv3NYW0.jpeg"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": 3,
+                  "user_id": 1,
+                  "blocked": {
+                    "data": {
+                      "id": 2,
+                      "name": "test2@gmail.com",
+                      "type": "users",
+                      "auth_vendors": null,
+                      "is_followed": false,
+                      "endpoint": "http://pnpd.dev/api/v1/users/2",
+                      "photos": null
+                    }
+                  }
+                },
+                {
+                  "id": 4,
+                  "user_id": 1,
+                  "blocked": {
+                    "data": {
+                      "id": 4,
+                      "name": "dietrich.chanel1468497323.027@mailinator.com",
+                      "type": "users",
+                      "auth_vendors": null,
+                      "is_followed": false,
+                      "endpoint": "http://pnpd.dev/api/v1/users/4",
+                      "photos": null
+                    }
+                  }
+                }
+              ],
+              "meta": {
+                "pagination": {
+                  "total": 3,
+                  "count": 3,
+                  "per_page": 15,
+                  "current_page": 1,
+                  "total_pages": 1,
+                  "links": []
+                }
+              }
             }
-          }
-        }
         
 
 #### Add users to blocklist [POST]
