@@ -1143,7 +1143,7 @@ http://docs.pnpdauthen.apiary.io
 
 ## Group Blocking
 
-### Blocks [/blocks{?per_page}]
+### Blocking [/blocklist{?per_page}]
 
 + Parameters
     + per_page (optional, number or all) ... Number of reccords that need to show with single api call
@@ -1157,6 +1157,21 @@ http://docs.pnpdauthen.apiary.io
             Authorization: Bearer {access_token}
             
 + Response 200 (application/json)
+        
+        {
+           "data":[],
+           "meta": {
+            "pagination": {
+              "total": 0,
+              "count": 0,
+              "per_page": 8,
+              "current_page": 1,
+              "total_pages": 1,
+              "links": []
+            }
+          }
+        }
+        
 
 #### Add users to blocklist [POST]
 
@@ -1226,9 +1241,7 @@ http://docs.pnpdauthen.apiary.io
             
 + Response 200 (application/json)
 
-        {
-           
-        }
+        {}
 
 
         
